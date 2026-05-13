@@ -288,6 +288,7 @@ ul { list-style: none; }
   right: 0;
   z-index: 900;
   height: 68px;
+  overflow: hidden;
   background: rgba(255,255,255,0.92);
   backdrop-filter: blur(20px) saturate(180%);
   -webkit-backdrop-filter: blur(20px) saturate(180%);
@@ -298,21 +299,31 @@ ul { list-style: none; }
   border-bottom-color: var(--c-border);
   box-shadow: 0 2px 20px rgba(15,14,26,0.06);
 }
+.navbar > .container {
+  height: 100%;
+}
 .navbar-inner {
   height: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.navbar-logo { display: flex; align-items: center; background: none; }
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  background: none;
+  flex-shrink: 0;
+}
 .navbar-logo img {
-  height: 46px;
-  max-height: 46px;
+  height: 44px;
+  max-height: 44px;
   width: auto;
-  max-width: 220px;
+  max-width: 200px;
   object-fit: contain;
   display: block;
   background: transparent;
+  flex-shrink: 0;
 }
 
 .navbar-links {
