@@ -486,44 +486,49 @@
 
 .h-heading-light {
   color: #FFFFFF;
-  margin-bottom: 48px;
+  margin-bottom: 56px;
   max-width: 640px;
 }
 
 .h-results-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 14px;
+  gap: 16px;
+  align-items: start;
 }
 
 .h-testi-card {
-  background: rgba(255,255,255,0.035);
-  border: 1px solid rgba(255,255,255,0.06);
-  border-radius: 14px;
-  padding: 22px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 20px;
+  padding: 24px;
   display: flex;
   flex-direction: column;
   gap: 10px;
-  transition: border-color 0.2s;
+  transition: transform 0.25s, border-color 0.25s;
 }
-.h-testi-card:hover { border-color: rgba(108,71,255,0.25); }
+.h-testi-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(108,71,255,0.3);
+  background: rgba(108,71,255,0.04);
+}
 
 .h-msg-recv {
-  background: rgba(255,255,255,0.06);
-  border-radius: 12px 12px 12px 3px;
-  padding: 11px 14px;
-  font-size: 13px;
-  color: rgba(255,255,255,0.75);
+  background: rgba(255,255,255,0.09);
+  border-radius: 18px 18px 18px 4px;
+  padding: 13px 16px;
+  font-size: 14px;
+  color: rgba(255,255,255,0.85);
   line-height: 1.6;
   align-self: flex-start;
-  max-width: 94%;
+  max-width: 95%;
 }
 
 .h-msg-sent {
-  background: #6C47FF;
-  border-radius: 12px 12px 3px 12px;
-  padding: 11px 14px;
-  font-size: 13px;
+  background: linear-gradient(135deg, #6C47FF, #38B6FF);
+  border-radius: 18px 18px 4px 18px;
+  padding: 13px 16px;
+  font-size: 14px;
   color: white;
   line-height: 1.6;
   align-self: flex-end;
@@ -536,13 +541,13 @@
   justify-content: space-between;
   padding-top: 10px;
   margin-top: auto;
-  border-top: 1px solid rgba(255,255,255,0.05);
+  border-top: 1px solid rgba(255,255,255,0.06);
 }
 
 .h-testi-name {
-  font-size: 10px;
+  font-size: 11px;
   font-weight: 700;
-  color: rgba(255,255,255,0.22);
+  color: rgba(255,255,255,0.3);
   text-transform: uppercase;
   letter-spacing: 1.2px;
 }
@@ -550,10 +555,10 @@
 .h-testi-score {
   font-size: 11px;
   font-weight: 700;
-  background: rgba(108,71,255,0.18);
-  color: #A78BFA;
-  padding: 3px 9px;
-  border-radius: 4px;
+  background: linear-gradient(135deg, #6C47FF, #38B6FF);
+  color: white;
+  padding: 4px 12px;
+  border-radius: 50px;
 }
 
 /* ---- PRICING ---- */
