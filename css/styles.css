@@ -314,13 +314,12 @@ ul { list-style: none; }
   height: 100%;
   background: none;
   flex-shrink: 0;
+  overflow: hidden;
 }
 .navbar-logo img {
-  height: 44px;
-  max-height: 44px;
+  height: 40px;
   width: auto;
-  max-width: 200px;
-  object-fit: contain;
+  max-width: 180px;
   display: block;
   background: transparent;
   flex-shrink: 0;
