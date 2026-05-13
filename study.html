@@ -1,610 +1,609 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Study Hub — TutorTime</title>
-  <meta name="description" content="Free ACT study tools: score estimator, section tracker, strategy flashcards, and practice quiz. No sign-up required.">
-  <link rel="icon" href="assets/tutortime-logo-transparent.png">
-  <link rel="stylesheet" href="css/styles.css">
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Study Hub TutorTime</title>
+ <meta name="description" content="Free ACT study tools: score estimator, section tracker, strategy flashcards, and practice quiz. No sign-up required.">
+ <link rel="icon" href="assets/tutortime-logo-transparent.png">
+ <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
 <!-- NAVBAR -->
 <nav class="navbar" id="navbar">
-  <div class="container">
-    <div class="navbar-inner">
-      <a href="index.html" class="navbar-logo">
-        <img src="assets/tutortime-logo-nav.png" alt="TutorTime">
-      </a>
-      <ul class="navbar-links">
-        <li><a href="index.html#how-it-works">How It Works</a></li>
-        <li><a href="study.html" class="active">Study Tools</a></li>
-        <li><a href="index.html#results">Results</a></li>
-        <li><a href="index.html#pricing">Pricing</a></li>
-      </ul>
-      <div class="navbar-actions">
-        <a href="index.html#signup" class="btn btn-primary btn-sm">Book Free Session</a>
-      </div>
-    </div>
-  </div>
+ <div class="container">
+ <div class="navbar-inner">
+ <a href="index.html" class="navbar-logo">
+ <img src="assets/tutortime-logo-nav.png" alt="TutorTime">
+ </a>
+ <ul class="navbar-links">
+ <li><a href="index.html#how-it-works">How It Works</a></li>
+ <li><a href="index.html#results">Results</a></li>
+ <li><a href="index.html#pricing">Pricing</a></li>
+ </ul>
+ <div class="navbar-actions">
+ <a href="index.html#signup" class="btn btn-primary btn-sm">Book Free Session</a>
+ </div>
+ </div>
+ </div>
 </nav>
 
 <!-- STUDY HERO -->
 <section class="study-hero">
-  <div class="container">
-    <div class="study-hero-inner">
-      <div class="badge badge-purple mb-16">Free Study Hub</div>
-      <h1 class="display-lg white mt-12">
-        Practice tools.<br>
-        <span class="grad-text">Zero cost.</span>
-      </h1>
-      <p class="hero-sub mt-16" style="max-width: 560px;">
-        Real ACT prep tools. No account needed, no ads, no fluff — just tools that help you actually study.
-      </p>
-    </div>
-  </div>
+ <div class="container">
+ <div class="study-hero-inner">
+ <div class="badge badge-purple mb-16">Free Study Hub</div>
+ <h1 class="display-lg white mt-12">
+ Practice tools.<br>
+ <span class="grad-text">Zero cost.</span>
+ </h1>
+ <p class="hero-sub mt-16" style="max-width: 560px;">
+ Real ACT prep tools. No account needed, no ads, no fluff just tools that help you actually study.
+ </p>
+ </div>
+ </div>
 </section>
 
 <!-- TOOLS NAV (sticky) -->
 <div class="tools-nav">
-  <div class="container">
-    <div class="tools-nav-inner">
-      <button class="tool-nav-btn active" data-tool="estimator">
-        <span class="tool-nav-icon">🎯</span>
-        Score Estimator
-      </button>
-      <button class="tool-nav-btn" data-tool="tracker">
-        <span class="tool-nav-icon">📊</span>
-        Section Tracker
-      </button>
-      <button class="tool-nav-btn" data-tool="flashcards">
-        <span class="tool-nav-icon">⚡</span>
-        ACT Study Flashcards
-      </button>
-      <button class="tool-nav-btn" data-tool="quiz">
-        <span class="tool-nav-icon">📝</span>
-        Practice Quiz
-      </button>
-      <button class="tool-nav-btn" data-tool="pomodoro">
-        <span class="tool-nav-icon">⏱️</span>
-        Pomodoro Timer
-      </button>
-    </div>
-  </div>
+ <div class="container">
+ <div class="tools-nav-inner">
+ <button class="tool-nav-btn active" data-tool="estimator">
+ <span class="tool-nav-icon">🎯</span>
+ Score Estimator
+ </button>
+ <button class="tool-nav-btn" data-tool="tracker">
+ <span class="tool-nav-icon">📊</span>
+ Section Tracker
+ </button>
+ <button class="tool-nav-btn" data-tool="flashcards">
+ <span class="tool-nav-icon">⚡</span>
+ ACT Study Flashcards
+ </button>
+ <button class="tool-nav-btn" data-tool="quiz">
+ <span class="tool-nav-icon">📝</span>
+ Practice Quiz
+ </button>
+ <button class="tool-nav-btn" data-tool="pomodoro">
+ <span class="tool-nav-icon">⏱️</span>
+ Pomodoro Timer
+ </button>
+ </div>
+ </div>
 </div>
 
 <!-- ============================================================
-     TOOL 1: SCORE ESTIMATOR
-     ============================================================ -->
+ TOOL 1: SCORE ESTIMATOR
+ ============================================================ -->
 <div class="tool-panel active" id="panel-estimator">
-  <div class="container">
-    <div class="mb-40">
-      <h2 class="display-md">ACT Score Estimator</h2>
-      <p class="text-lg muted mt-12">Enter how many questions you got right in each section. We'll estimate your composite score and tell you what it means for college admissions.</p>
-    </div>
+ <div class="container">
+ <div class="mb-40">
+ <h2 class="display-md">ACT Score Estimator</h2>
+ <p class="text-lg muted mt-12">Enter how many questions you got right in each section. We'll estimate your composite score and tell you what it means for college admissions.</p>
+ </div>
 
-    <div class="estimator-layout">
-      <!-- INPUTS -->
-      <div class="estimator-inputs">
+ <div class="estimator-layout">
+ <!-- INPUTS -->
+ <div class="estimator-inputs">
 
-        <div class="est-row">
-          <div class="est-row-header">
-            <div class="est-row-label">
-              <div class="est-row-icon">📝</div>
-              English
-            </div>
-            <span class="est-row-max">50 questions</span>
-          </div>
-          <div class="est-input-wrap">
-            <input type="number" class="est-num-input" id="estEngInput" min="0" max="50" placeholder="0">
-            <div class="est-bar-wrap">
-              <div class="est-bar-track">
-                <div class="est-bar-fill" id="estEngBar" style="width: 0%"></div>
-              </div>
-            </div>
-            <span class="est-section-score" id="estEngScore">—</span>
-          </div>
-        </div>
+ <div class="est-row">
+ <div class="est-row-header">
+ <div class="est-row-label">
+ <div class="est-row-icon">📝</div>
+ English
+ </div>
+ <span class="est-row-max">50 questions</span>
+ </div>
+ <div class="est-input-wrap">
+ <input type="number" class="est-num-input" id="estEngInput" min="0" max="50" placeholder="0">
+ <div class="est-bar-wrap">
+ <div class="est-bar-track">
+ <div class="est-bar-fill" id="estEngBar" style="width: 0%"></div>
+ </div>
+ </div>
+ <span class="est-section-score" id="estEngScore"></span>
+ </div>
+ </div>
 
-        <div class="est-row">
-          <div class="est-row-header">
-            <div class="est-row-label">
-              <div class="est-row-icon">➗</div>
-              Mathematics
-            </div>
-            <span class="est-row-max">45 questions</span>
-          </div>
-          <div class="est-input-wrap">
-            <input type="number" class="est-num-input" id="estMathInput" min="0" max="45" placeholder="0">
-            <div class="est-bar-wrap">
-              <div class="est-bar-track">
-                <div class="est-bar-fill" id="estMathBar" style="width: 0%"></div>
-              </div>
-            </div>
-            <span class="est-section-score" id="estMathScore">—</span>
-          </div>
-        </div>
+ <div class="est-row">
+ <div class="est-row-header">
+ <div class="est-row-label">
+ <div class="est-row-icon">➗</div>
+ Mathematics
+ </div>
+ <span class="est-row-max">45 questions</span>
+ </div>
+ <div class="est-input-wrap">
+ <input type="number" class="est-num-input" id="estMathInput" min="0" max="45" placeholder="0">
+ <div class="est-bar-wrap">
+ <div class="est-bar-track">
+ <div class="est-bar-fill" id="estMathBar" style="width: 0%"></div>
+ </div>
+ </div>
+ <span class="est-section-score" id="estMathScore"></span>
+ </div>
+ </div>
 
-        <div class="est-row">
-          <div class="est-row-header">
-            <div class="est-row-label">
-              <div class="est-row-icon">📖</div>
-              Reading
-            </div>
-            <span class="est-row-max">36 questions</span>
-          </div>
-          <div class="est-input-wrap">
-            <input type="number" class="est-num-input" id="estReadInput" min="0" max="36" placeholder="0">
-            <div class="est-bar-wrap">
-              <div class="est-bar-track">
-                <div class="est-bar-fill" id="estReadBar" style="width: 0%"></div>
-              </div>
-            </div>
-            <span class="est-section-score" id="estReadScore">—</span>
-          </div>
-        </div>
+ <div class="est-row">
+ <div class="est-row-header">
+ <div class="est-row-label">
+ <div class="est-row-icon">📖</div>
+ Reading
+ </div>
+ <span class="est-row-max">36 questions</span>
+ </div>
+ <div class="est-input-wrap">
+ <input type="number" class="est-num-input" id="estReadInput" min="0" max="36" placeholder="0">
+ <div class="est-bar-wrap">
+ <div class="est-bar-track">
+ <div class="est-bar-fill" id="estReadBar" style="width: 0%"></div>
+ </div>
+ </div>
+ <span class="est-section-score" id="estReadScore"></span>
+ </div>
+ </div>
 
-        <div class="est-row">
-          <div class="est-row-header">
-            <div class="est-row-label">
-              <div class="est-row-icon">🔬</div>
-              Science
-            </div>
-            <span class="est-row-max">40 questions</span>
-          </div>
-          <div class="est-input-wrap">
-            <input type="number" class="est-num-input" id="estSciInput" min="0" max="40" placeholder="0">
-            <div class="est-bar-wrap">
-              <div class="est-bar-track">
-                <div class="est-bar-fill" id="estSciBar" style="width: 0%"></div>
-              </div>
-            </div>
-            <span class="est-section-score" id="estSciScore">—</span>
-          </div>
-        </div>
+ <div class="est-row">
+ <div class="est-row-header">
+ <div class="est-row-label">
+ <div class="est-row-icon">🔬</div>
+ Science
+ </div>
+ <span class="est-row-max">40 questions</span>
+ </div>
+ <div class="est-input-wrap">
+ <input type="number" class="est-num-input" id="estSciInput" min="0" max="40" placeholder="0">
+ <div class="est-bar-wrap">
+ <div class="est-bar-track">
+ <div class="est-bar-fill" id="estSciBar" style="width: 0%"></div>
+ </div>
+ </div>
+ <span class="est-section-score" id="estSciScore"></span>
+ </div>
+ </div>
 
-      </div>
+ </div>
 
-      <!-- RESULT CARD -->
-      <div class="est-result-card">
-        <div class="est-result-label">Estimated Composite</div>
-        <div class="est-composite" id="estComposite">—</div>
-        <div class="est-out-of">/ 36</div>
-        <div class="est-tier" id="estTier">Enter all 4 sections above</div>
+ <!-- RESULT CARD -->
+ <div class="est-result-card">
+ <div class="est-result-label">Estimated Composite</div>
+ <div class="est-composite" id="estComposite"></div>
+ <div class="est-out-of">/ 36</div>
+ <div class="est-tier" id="estTier">Enter all 4 sections above</div>
 
-        <div class="est-breakdown-list">
-          <div class="est-breakdown-row">
-            <div class="est-bd-dot"></div>
-            <span class="est-bd-label">English</span>
-            <span class="est-bd-val" id="estBdEng">—</span>
-          </div>
-          <div class="est-breakdown-row">
-            <div class="est-bd-dot"></div>
-            <span class="est-bd-label">Math</span>
-            <span class="est-bd-val" id="estBdMath">—</span>
-          </div>
-          <div class="est-breakdown-row">
-            <div class="est-bd-dot"></div>
-            <span class="est-bd-label">Reading</span>
-            <span class="est-bd-val" id="estBdRead">—</span>
-          </div>
-          <div class="est-breakdown-row">
-            <div class="est-bd-dot"></div>
-            <span class="est-bd-label">Science</span>
-            <span class="est-bd-val" id="estBdSci">—</span>
-          </div>
-        </div>
+ <div class="est-breakdown-list">
+ <div class="est-breakdown-row">
+ <div class="est-bd-dot"></div>
+ <span class="est-bd-label">English</span>
+ <span class="est-bd-val" id="estBdEng"></span>
+ </div>
+ <div class="est-breakdown-row">
+ <div class="est-bd-dot"></div>
+ <span class="est-bd-label">Math</span>
+ <span class="est-bd-val" id="estBdMath"></span>
+ </div>
+ <div class="est-breakdown-row">
+ <div class="est-bd-dot"></div>
+ <span class="est-bd-label">Reading</span>
+ <span class="est-bd-val" id="estBdRead"></span>
+ </div>
+ <div class="est-breakdown-row">
+ <div class="est-bd-dot"></div>
+ <span class="est-bd-label">Science</span>
+ <span class="est-bd-val" id="estBdSci"></span>
+ </div>
+ </div>
 
-        <p class="est-cta-hint" id="estCTAHint">Enter your raw scores above to see your composite estimate.</p>
+ <p class="est-cta-hint" id="estCTAHint">Enter your raw scores above to see your composite estimate.</p>
 
-        <a href="index.html#signup" class="btn btn-white btn-sm mt-24" style="width:100%; justify-content:center;">Want to improve this? Book a session &rarr;</a>
-      </div>
-    </div>
-  </div>
+ <a href="index.html#signup" class="btn btn-white btn-sm mt-24" style="width:100%; justify-content:center;">Want to improve this? Book a session &rarr;</a>
+ </div>
+ </div>
+ </div>
 </div>
 
 <!-- ============================================================
-     TOOL 2: SECTION TRACKER
-     ============================================================ -->
+ TOOL 2: SECTION TRACKER
+ ============================================================ -->
 <div class="tool-panel" id="panel-tracker">
-  <div class="container">
-    <div class="mb-40">
-      <h2 class="display-md">Section Strength Tracker</h2>
-      <p class="text-lg muted mt-12">Rate your confidence in each ACT section from 1 to 10. We'll build a personalized study priority plan so you know exactly where to put your time.</p>
-    </div>
+ <div class="container">
+ <div class="mb-40">
+ <h2 class="display-md">Section Strength Tracker</h2>
+ <p class="text-lg muted mt-12">Rate your confidence in each ACT section from 1 to 10. We'll build a personalized study priority plan so you know exactly where to put your time.</p>
+ </div>
 
-    <div class="tracker-layout">
-      <!-- SLIDERS -->
-      <div class="tracker-sliders">
+ <div class="tracker-layout">
+ <!-- SLIDERS -->
+ <div class="tracker-sliders">
 
-        <div class="tracker-item">
-          <div class="tracker-item-header">
-            <div class="tracker-item-label">
-              <span style="font-size:20px">📝</span>
-              English
-            </div>
-            <span class="tracker-score-badge" id="engLevel">5</span>
-          </div>
-          <input type="range" class="tracker-slider" id="engSlider" min="1" max="10" value="5">
-          <div class="tracker-item-desc" id="engDesc">Average — room to grow</div>
-        </div>
+ <div class="tracker-item">
+ <div class="tracker-item-header">
+ <div class="tracker-item-label">
+ <span style="font-size:20px">📝</span>
+ English
+ </div>
+ <span class="tracker-score-badge" id="engLevel">5</span>
+ </div>
+ <input type="range" class="tracker-slider" id="engSlider" min="1" max="10" value="5">
+ <div class="tracker-item-desc" id="engDesc">Average room to grow</div>
+ </div>
 
-        <div class="tracker-item">
-          <div class="tracker-item-header">
-            <div class="tracker-item-label">
-              <span style="font-size:20px">➗</span>
-              Mathematics
-            </div>
-            <span class="tracker-score-badge" id="mathLevel">5</span>
-          </div>
-          <input type="range" class="tracker-slider" id="mathSlider" min="1" max="10" value="5">
-          <div class="tracker-item-desc" id="mathDesc">Average — room to grow</div>
-        </div>
+ <div class="tracker-item">
+ <div class="tracker-item-header">
+ <div class="tracker-item-label">
+ <span style="font-size:20px">➗</span>
+ Mathematics
+ </div>
+ <span class="tracker-score-badge" id="mathLevel">5</span>
+ </div>
+ <input type="range" class="tracker-slider" id="mathSlider" min="1" max="10" value="5">
+ <div class="tracker-item-desc" id="mathDesc">Average room to grow</div>
+ </div>
 
-        <div class="tracker-item">
-          <div class="tracker-item-header">
-            <div class="tracker-item-label">
-              <span style="font-size:20px">📖</span>
-              Reading
-            </div>
-            <span class="tracker-score-badge" id="readLevel">5</span>
-          </div>
-          <input type="range" class="tracker-slider" id="readSlider" min="1" max="10" value="5">
-          <div class="tracker-item-desc" id="readDesc">Average — room to grow</div>
-        </div>
+ <div class="tracker-item">
+ <div class="tracker-item-header">
+ <div class="tracker-item-label">
+ <span style="font-size:20px">📖</span>
+ Reading
+ </div>
+ <span class="tracker-score-badge" id="readLevel">5</span>
+ </div>
+ <input type="range" class="tracker-slider" id="readSlider" min="1" max="10" value="5">
+ <div class="tracker-item-desc" id="readDesc">Average room to grow</div>
+ </div>
 
-        <div class="tracker-item">
-          <div class="tracker-item-header">
-            <div class="tracker-item-label">
-              <span style="font-size:20px">🔬</span>
-              Science
-            </div>
-            <span class="tracker-score-badge" id="sciLevel">5</span>
-          </div>
-          <input type="range" class="tracker-slider" id="sciSlider" min="1" max="10" value="5">
-          <div class="tracker-item-desc" id="sciDesc">Average — room to grow</div>
-        </div>
+ <div class="tracker-item">
+ <div class="tracker-item-header">
+ <div class="tracker-item-label">
+ <span style="font-size:20px">🔬</span>
+ Science
+ </div>
+ <span class="tracker-score-badge" id="sciLevel">5</span>
+ </div>
+ <input type="range" class="tracker-slider" id="sciSlider" min="1" max="10" value="5">
+ <div class="tracker-item-desc" id="sciDesc">Average room to grow</div>
+ </div>
 
-      </div>
+ </div>
 
-      <!-- RESULT PANEL -->
-      <div class="tracker-result-panel">
-        <div class="tracker-result-title">Your Study Plan</div>
+ <!-- RESULT PANEL -->
+ <div class="tracker-result-panel">
+ <div class="tracker-result-title">Your Study Plan</div>
 
-        <!-- Simple radar chart -->
-        <div class="tracker-radar">
-          <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" width="200" height="200">
-            <!-- Background rings -->
-            <polygon points="100,20 180,100 100,180 20,100" class="radar-bg" stroke-width="1"/>
-            <polygon points="100,40 160,100 100,160 40,100" class="radar-bg" stroke-width="1"/>
-            <polygon points="100,60 140,100 100,140 60,100" class="radar-bg" stroke-width="1"/>
-            <polygon points="100,80 120,100 100,120 80,100" class="radar-bg" stroke-width="1"/>
-            <!-- Axis lines -->
-            <line x1="100" y1="20" x2="100" y2="180" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
-            <line x1="20" y1="100" x2="180" y2="100" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
-            <!-- Data polygon -->
-            <polygon id="radarFill" points="100,20 180,100 100,180 20,100" class="radar-fill"/>
-            <!-- Labels -->
-            <text x="100" y="12" text-anchor="middle" class="radar-labels" fill="rgba(255,255,255,0.45)" font-size="10" font-family="Figtree, sans-serif">ENG</text>
-            <text x="192" y="103" text-anchor="start" class="radar-labels" fill="rgba(255,255,255,0.45)" font-size="10" font-family="Figtree, sans-serif">MATH</text>
-            <text x="100" y="196" text-anchor="middle" class="radar-labels" fill="rgba(255,255,255,0.45)" font-size="10" font-family="Figtree, sans-serif">READ</text>
-            <text x="8" y="103" text-anchor="start" class="radar-labels" fill="rgba(255,255,255,0.45)" font-size="10" font-family="Figtree, sans-serif">SCI</text>
-          </svg>
-        </div>
+ <!-- Simple radar chart -->
+ <div class="tracker-radar">
+ <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" width="200" height="200">
+ <!-- Background rings -->
+ <polygon points="100,20 180,100 100,180 20,100" class="radar-bg" stroke-width="1"/>
+ <polygon points="100,40 160,100 100,160 40,100" class="radar-bg" stroke-width="1"/>
+ <polygon points="100,60 140,100 100,140 60,100" class="radar-bg" stroke-width="1"/>
+ <polygon points="100,80 120,100 100,120 80,100" class="radar-bg" stroke-width="1"/>
+ <!-- Axis lines -->
+ <line x1="100" y1="20" x2="100" y2="180" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+ <line x1="20" y1="100" x2="180" y2="100" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+ <!-- Data polygon -->
+ <polygon id="radarFill" points="100,20 180,100 100,180 20,100" class="radar-fill"/>
+ <!-- Labels -->
+ <text x="100" y="12" text-anchor="middle" class="radar-labels" fill="rgba(255,255,255,0.45)" font-size="10" font-family="Figtree, sans-serif">ENG</text>
+ <text x="192" y="103" text-anchor="start" class="radar-labels" fill="rgba(255,255,255,0.45)" font-size="10" font-family="Figtree, sans-serif">MATH</text>
+ <text x="100" y="196" text-anchor="middle" class="radar-labels" fill="rgba(255,255,255,0.45)" font-size="10" font-family="Figtree, sans-serif">READ</text>
+ <text x="8" y="103" text-anchor="start" class="radar-labels" fill="rgba(255,255,255,0.45)" font-size="10" font-family="Figtree, sans-serif">SCI</text>
+ </svg>
+ </div>
 
-        <div class="tracker-plan">
-          <div class="tracker-plan-item" id="planItem0">
-            <div class="tracker-plan-priority priority-1" id="planNum0">1</div>
-            <div>
-              <div class="tracker-plan-subject" id="planSubj0">—</div>
-              <div class="tracker-plan-desc" id="planDesc0">—</div>
-            </div>
-          </div>
-          <div class="tracker-plan-item" id="planItem1">
-            <div class="tracker-plan-priority priority-2" id="planNum1">2</div>
-            <div>
-              <div class="tracker-plan-subject" id="planSubj1">—</div>
-              <div class="tracker-plan-desc" id="planDesc1">—</div>
-            </div>
-          </div>
-          <div class="tracker-plan-item" id="planItem2">
-            <div class="tracker-plan-priority priority-3" id="planNum2">3</div>
-            <div>
-              <div class="tracker-plan-subject" id="planSubj2">—</div>
-              <div class="tracker-plan-desc" id="planDesc2">—</div>
-            </div>
-          </div>
-          <div class="tracker-plan-item" id="planItem3">
-            <div class="tracker-plan-priority priority-4" id="planNum3">4</div>
-            <div>
-              <div class="tracker-plan-subject" id="planSubj3">—</div>
-              <div class="tracker-plan-desc" id="planDesc3">—</div>
-            </div>
-          </div>
-        </div>
+ <div class="tracker-plan">
+ <div class="tracker-plan-item" id="planItem0">
+ <div class="tracker-plan-priority priority-1" id="planNum0">1</div>
+ <div>
+ <div class="tracker-plan-subject" id="planSubj0"></div>
+ <div class="tracker-plan-desc" id="planDesc0"></div>
+ </div>
+ </div>
+ <div class="tracker-plan-item" id="planItem1">
+ <div class="tracker-plan-priority priority-2" id="planNum1">2</div>
+ <div>
+ <div class="tracker-plan-subject" id="planSubj1"></div>
+ <div class="tracker-plan-desc" id="planDesc1"></div>
+ </div>
+ </div>
+ <div class="tracker-plan-item" id="planItem2">
+ <div class="tracker-plan-priority priority-3" id="planNum2">3</div>
+ <div>
+ <div class="tracker-plan-subject" id="planSubj2"></div>
+ <div class="tracker-plan-desc" id="planDesc2"></div>
+ </div>
+ </div>
+ <div class="tracker-plan-item" id="planItem3">
+ <div class="tracker-plan-priority priority-4" id="planNum3">4</div>
+ <div>
+ <div class="tracker-plan-subject" id="planSubj3"></div>
+ <div class="tracker-plan-desc" id="planDesc3"></div>
+ </div>
+ </div>
+ </div>
 
-        <a href="index.html#signup" class="btn btn-white btn-sm mt-24" style="width:100%; justify-content:center;">Get a personalized session plan &rarr;</a>
-      </div>
-    </div>
-  </div>
+ <a href="index.html#signup" class="btn btn-white btn-sm mt-24" style="width:100%; justify-content:center;">Get a personalized session plan &rarr;</a>
+ </div>
+ </div>
+ </div>
 </div>
 
 <!-- ============================================================
-     TOOL 3: FLASHCARDS
-     ============================================================ -->
+ TOOL 3: FLASHCARDS
+ ============================================================ -->
 <div class="tool-panel" id="panel-flashcards">
-  <div class="container">
-    <div class="mb-40">
-      <h2 class="display-md">ACT Study Flashcards</h2>
-      <p class="text-lg muted mt-12">12 proven ACT strategies used by students who score 30+. Click a card to flip it, mark whether you knew it, and track your progress.</p>
-    </div>
+ <div class="container">
+ <div class="mb-40">
+ <h2 class="display-md">ACT Study Flashcards</h2>
+ <p class="text-lg muted mt-12">12 proven ACT strategies used by students who score 30+. Click a card to flip it, mark whether you knew it, and track your progress.</p>
+ </div>
 
-    <div class="flashcard-layout">
-      <!-- MAIN FLASHCARD -->
-      <div class="flashcard-main">
+ <div class="flashcard-layout">
+ <!-- MAIN FLASHCARD -->
+ <div class="flashcard-main">
 
-        <!-- Progress bar -->
-        <div class="flashcard-progress">
-          <span class="flashcard-progress-text">Card <span id="fcCardNum">1</span> of <span id="fcCardTotal">80</span></span>
-          <div class="flashcard-progress-bar-wrap">
-            <div class="flashcard-progress-bar" id="fcProgressBar" style="width:1%"></div>
-          </div>
-          <span class="flashcard-progress-count" id="fcFilterTotal">80 cards</span>
-        </div>
+ <!-- Progress bar -->
+ <div class="flashcard-progress">
+ <span class="flashcard-progress-text">Card <span id="fcCardNum">1</span> of <span id="fcCardTotal">80</span></span>
+ <div class="flashcard-progress-bar-wrap">
+ <div class="flashcard-progress-bar" id="fcProgressBar" style="width:1%"></div>
+ </div>
+ <span class="flashcard-progress-count" id="fcFilterTotal">80 cards</span>
+ </div>
 
-        <!-- Card -->
-        <div class="flashcard-scene">
-          <div class="flashcard" id="flashcard">
+ <!-- Card -->
+ <div class="flashcard-scene">
+ <div class="flashcard" id="flashcard">
 
-            <!-- FRONT -->
-            <div class="card-face card-front">
-              <div class="fc-front-badges">
-                <span class="fc-badge-subject" id="cardSubject">English</span>
-                <span class="fc-badge-topic" id="cardTopic">Subject-Verb Agreement</span>
-                <span class="fc-diff-badge" id="cardDifficulty">Easy</span>
-              </div>
-              <div class="card-question" id="cardQuestion">Loading...</div>
-              <div class="card-hint" id="fcFlipHint">
-                <span>👆 Tap to flip</span>
-              </div>
-            </div>
+ <!-- FRONT -->
+ <div class="card-face card-front">
+ <div class="fc-front-badges">
+ <span class="fc-badge-subject" id="cardSubject">English</span>
+ <span class="fc-badge-topic" id="cardTopic">Subject-Verb Agreement</span>
+ <span class="fc-diff-badge" id="cardDifficulty">Easy</span>
+ </div>
+ <div class="card-question" id="cardQuestion">Loading...</div>
+ <div class="card-hint" id="fcFlipHint">
+ <span>👆 Tap to flip</span>
+ </div>
+ </div>
 
-            <!-- BACK -->
-            <div class="card-face card-back">
-              <div class="fc-back-inner">
-                <div class="fc-back-answer" id="cardAnswer">Loading...</div>
-                <div class="fc-back-example">
-                  <div class="fc-back-example-label">Example</div>
-                  <div class="fc-back-example-text" id="cardExample"></div>
-                </div>
-                <div class="fc-back-why">
-                  <span class="fc-back-why-label">Why it matters on the ACT:</span>
-                  <span id="cardWhy"></span>
-                </div>
-              </div>
-            </div>
+ <!-- BACK -->
+ <div class="card-face card-back">
+ <div class="fc-back-inner">
+ <div class="fc-back-answer" id="cardAnswer">Loading...</div>
+ <div class="fc-back-example">
+ <div class="fc-back-example-label">Example</div>
+ <div class="fc-back-example-text" id="cardExample"></div>
+ </div>
+ <div class="fc-back-why">
+ <span class="fc-back-why-label">Why it matters on the ACT:</span>
+ <span id="cardWhy"></span>
+ </div>
+ </div>
+ </div>
 
-          </div>
-        </div>
+ </div>
+ </div>
 
-        <!-- Result buttons (appear after flip) -->
-        <div class="flashcard-result-btns" id="fcResultBtns" style="display:none">
-          <button class="btn-knew-it" id="fcKnewIt">✓ Got it</button>
-          <button class="btn-missed-it" id="fcMissedIt">✗ Missed it</button>
-          <button class="btn-star" id="fcStarBtn">☆ Star</button>
-        </div>
+ <!-- Result buttons (appear after flip) -->
+ <div class="flashcard-result-btns" id="fcResultBtns" style="display:none">
+ <button class="btn-knew-it" id="fcKnewIt">✓ Got it</button>
+ <button class="btn-missed-it" id="fcMissedIt">✗ Missed it</button>
+ <button class="btn-star" id="fcStarBtn">☆ Star</button>
+ </div>
 
-        <!-- Navigation -->
-        <div class="flashcard-controls">
-          <button class="btn btn-outline" id="fcPrev">← Prev</button>
-          <button class="btn btn-primary" id="fcNext">Next →</button>
-        </div>
+ <!-- Navigation -->
+ <div class="flashcard-controls">
+ <button class="btn btn-outline" id="fcPrev">← Prev</button>
+ <button class="btn btn-primary" id="fcNext">Next →</button>
+ </div>
 
-        <!-- Credibility note -->
-        <p class="fc-disclaimer">These are original TutorTime study materials based on skills commonly tested on the ACT. They are not copied from official ACT test questions.</p>
-      </div>
+ <!-- Credibility note -->
+ <p class="fc-disclaimer">These are original TutorTime study materials based on skills commonly tested on the ACT. They are not copied from official ACT test questions.</p>
+ </div>
 
-      <!-- SIDEBAR -->
-      <div class="flashcard-sidebar">
+ <!-- SIDEBAR -->
+ <div class="flashcard-sidebar">
 
-        <!-- Subject filters -->
-        <div class="fc-filter-card">
-          <div class="fc-filter-label">Filter by Subject</div>
-          <div class="fc-filter-btns">
-            <button class="fc-subject-btn active" data-value="All">All</button>
-            <button class="fc-subject-btn" data-value="English">📝 English</button>
-            <button class="fc-subject-btn" data-value="Math">➗ Math</button>
-            <button class="fc-subject-btn" data-value="Reading">📖 Reading</button>
-            <button class="fc-subject-btn" data-value="Science">🔬 Science</button>
-            <button class="fc-subject-btn" data-value="Strategy Tips">🎯 Strategy</button>
-            <button class="fc-subject-btn" data-value="Starred">★ Starred</button>
-          </div>
-        </div>
+ <!-- Subject filters -->
+ <div class="fc-filter-card">
+ <div class="fc-filter-label">Filter by Subject</div>
+ <div class="fc-filter-btns">
+ <button class="fc-subject-btn active" data-value="All">All</button>
+ <button class="fc-subject-btn" data-value="English">📝 English</button>
+ <button class="fc-subject-btn" data-value="Math">➗ Math</button>
+ <button class="fc-subject-btn" data-value="Reading">📖 Reading</button>
+ <button class="fc-subject-btn" data-value="Science">🔬 Science</button>
+ <button class="fc-subject-btn" data-value="Strategy Tips">🎯 Strategy</button>
+ <button class="fc-subject-btn" data-value="Starred">★ Starred</button>
+ </div>
+ </div>
 
-        <!-- Difficulty filters -->
-        <div class="fc-filter-card">
-          <div class="fc-filter-label">Filter by Difficulty</div>
-          <div class="fc-filter-btns">
-            <button class="fc-diff-btn active" data-value="All">All</button>
-            <button class="fc-diff-btn" data-value="Easy">Easy</button>
-            <button class="fc-diff-btn" data-value="Medium">Medium</button>
-            <button class="fc-diff-btn" data-value="Hard">Hard</button>
-          </div>
-        </div>
+ <!-- Difficulty filters -->
+ <div class="fc-filter-card">
+ <div class="fc-filter-label">Filter by Difficulty</div>
+ <div class="fc-filter-btns">
+ <button class="fc-diff-btn active" data-value="All">All</button>
+ <button class="fc-diff-btn" data-value="Easy">Easy</button>
+ <button class="fc-diff-btn" data-value="Medium">Medium</button>
+ <button class="fc-diff-btn" data-value="Hard">Hard</button>
+ </div>
+ </div>
 
-        <!-- Session Stats -->
-        <div class="fc-stats-card">
-          <h4>Session Stats</h4>
-          <div class="fc-stat-row">
-            <span class="fc-stat-label">Reviewed</span>
-            <span class="fc-stat-val" id="fcStatReviewed">0</span>
-          </div>
-          <div class="fc-stat-row">
-            <span class="fc-stat-label" style="color:var(--c-green)">✓ Got it</span>
-            <span class="fc-stat-val" style="color:var(--c-green)" id="fcStatCorrect">0</span>
-          </div>
-          <div class="fc-stat-row">
-            <span class="fc-stat-label" style="color:var(--c-red)">✗ Missed</span>
-            <span class="fc-stat-val" style="color:var(--c-red)" id="fcStatWrong">0</span>
-          </div>
-          <div class="fc-stat-row">
-            <span class="fc-stat-label">Accuracy</span>
-            <span class="fc-stat-val" id="fcStatAccuracy">—</span>
-          </div>
-          <div class="fc-stat-row">
-            <span class="fc-stat-label">★ Starred</span>
-            <span class="fc-stat-val" id="fcStatStarred">0</span>
-          </div>
-        </div>
+ <!-- Session Stats -->
+ <div class="fc-stats-card">
+ <h4>Session Stats</h4>
+ <div class="fc-stat-row">
+ <span class="fc-stat-label">Reviewed</span>
+ <span class="fc-stat-val" id="fcStatReviewed">0</span>
+ </div>
+ <div class="fc-stat-row">
+ <span class="fc-stat-label" style="color:var(--c-green)">✓ Got it</span>
+ <span class="fc-stat-val" style="color:var(--c-green)" id="fcStatCorrect">0</span>
+ </div>
+ <div class="fc-stat-row">
+ <span class="fc-stat-label" style="color:var(--c-red)">✗ Missed</span>
+ <span class="fc-stat-val" style="color:var(--c-red)" id="fcStatWrong">0</span>
+ </div>
+ <div class="fc-stat-row">
+ <span class="fc-stat-label">Accuracy</span>
+ <span class="fc-stat-val" id="fcStatAccuracy"></span>
+ </div>
+ <div class="fc-stat-row">
+ <span class="fc-stat-label">★ Starred</span>
+ <span class="fc-stat-val" id="fcStatStarred">0</span>
+ </div>
+ </div>
 
-        <!-- Breakdown -->
-        <div class="fc-filter-card" style="margin-top:0">
-          <div class="fc-filter-label">Card Breakdown</div>
-          <div style="font-size:13px; color:var(--c-muted); display:flex; flex-direction:column; gap:6px; margin-top:4px;">
-            <div style="display:flex;justify-content:space-between;"><span>📝 English</span><span style="font-weight:700;color:var(--c-dark)">25</span></div>
-            <div style="display:flex;justify-content:space-between;"><span>➗ Math</span><span style="font-weight:700;color:var(--c-dark)">30</span></div>
-            <div style="display:flex;justify-content:space-between;"><span>📖 Reading</span><span style="font-weight:700;color:var(--c-dark)">12</span></div>
-            <div style="display:flex;justify-content:space-between;"><span>🔬 Science</span><span style="font-weight:700;color:var(--c-dark)">10</span></div>
-            <div style="display:flex;justify-content:space-between;"><span>🎯 Strategy</span><span style="font-weight:700;color:var(--c-dark)">8</span></div>
-          </div>
-        </div>
+ <!-- Breakdown -->
+ <div class="fc-filter-card" style="margin-top:0">
+ <div class="fc-filter-label">Card Breakdown</div>
+ <div style="font-size:13px; color:var(--c-muted); display:flex; flex-direction:column; gap:6px; margin-top:4px;">
+ <div style="display:flex;justify-content:space-between;"><span>📝 English</span><span style="font-weight:700;color:var(--c-dark)">25</span></div>
+ <div style="display:flex;justify-content:space-between;"><span>➗ Math</span><span style="font-weight:700;color:var(--c-dark)">30</span></div>
+ <div style="display:flex;justify-content:space-between;"><span>📖 Reading</span><span style="font-weight:700;color:var(--c-dark)">12</span></div>
+ <div style="display:flex;justify-content:space-between;"><span>🔬 Science</span><span style="font-weight:700;color:var(--c-dark)">10</span></div>
+ <div style="display:flex;justify-content:space-between;"><span>🎯 Strategy</span><span style="font-weight:700;color:var(--c-dark)">8</span></div>
+ </div>
+ </div>
 
-      </div>
-    </div>
-  </div>
+ </div>
+ </div>
+ </div>
 </div>
 
 <!-- ============================================================
-     TOOL 4: PRACTICE QUIZ
-     ============================================================ -->
+ TOOL 4: PRACTICE QUIZ
+ ============================================================ -->
 <div class="tool-panel" id="panel-quiz">
-  <div class="container">
-    <div class="mb-40">
-      <h2 class="display-md">Practice Quiz</h2>
-      <p class="text-lg muted mt-12">5 real ACT-style questions across English, Math, Reading, and Science. Each answer comes with a full explanation so you actually learn why.</p>
-    </div>
+ <div class="container">
+ <div class="mb-40">
+ <h2 class="display-md">Practice Quiz</h2>
+ <p class="text-lg muted mt-12">5 real ACT-style questions across English, Math, Reading, and Science. Each answer comes with a full explanation so you actually learn why.</p>
+ </div>
 
-    <div class="quiz-layout">
-      <div id="quizQuestion">
-        <div class="quiz-header">
-          <div class="quiz-progress-text" id="qProgressText">Question 1 of 5</div>
-          <div class="quiz-score-live">
-            <span class="quiz-correct">✓ <span id="quizCorrectCount">0</span></span>
-            <span class="quiz-wrong">✗ <span id="quizWrongCount">0</span></span>
-          </div>
-        </div>
+ <div class="quiz-layout">
+ <div id="quizQuestion">
+ <div class="quiz-header">
+ <div class="quiz-progress-text" id="qProgressText">Question 1 of 5</div>
+ <div class="quiz-score-live">
+ <span class="quiz-correct">✓ <span id="quizCorrectCount">0</span></span>
+ <span class="quiz-wrong">✗ <span id="quizWrongCount">0</span></span>
+ </div>
+ </div>
 
-        <div class="quiz-question-card">
-          <div class="quiz-q-meta">
-            <div class="quiz-q-num" id="qNum">1</div>
-            <span class="quiz-q-section" id="qSection">Section</span>
-          </div>
+ <div class="quiz-question-card">
+ <div class="quiz-q-meta">
+ <div class="quiz-q-num" id="qNum">1</div>
+ <span class="quiz-q-section" id="qSection">Section</span>
+ </div>
 
-          <div class="quiz-q-passage" id="qPassage" style="display:none"></div>
-          <div class="quiz-q-text" id="qText">Loading question...</div>
+ <div class="quiz-q-passage" id="qPassage" style="display:none"></div>
+ <div class="quiz-q-text" id="qText">Loading question...</div>
 
-          <div class="quiz-options" id="qOptions"></div>
+ <div class="quiz-options" id="qOptions"></div>
 
-          <div class="quiz-explanation" id="qExplanation">
-            <div class="quiz-explanation-title">Why this answer?</div>
-            <div class="quiz-explanation-text" id="qExplanationText"></div>
-          </div>
-        </div>
+ <div class="quiz-explanation" id="qExplanation">
+ <div class="quiz-explanation-title">Why this answer?</div>
+ <div class="quiz-explanation-text" id="qExplanationText"></div>
+ </div>
+ </div>
 
-        <div class="quiz-nav">
-          <div></div>
-          <button class="btn btn-primary btn-lg" id="quizNextBtn">Next Question →</button>
-        </div>
-      </div>
+ <div class="quiz-nav">
+ <div></div>
+ <button class="btn btn-primary btn-lg" id="quizNextBtn">Next Question →</button>
+ </div>
+ </div>
 
-      <!-- Results -->
-      <div class="quiz-results" id="quizResults">
-        <div class="badge badge-purple mb-24" style="margin:0 auto 24px">Quiz Complete</div>
-        <div class="quiz-results-score" id="quizFinalScore">—</div>
-        <h3 class="display-sm mt-16" id="quizFinalMsg">—</h3>
-        <p class="text-md muted mt-12 mb-32" id="quizFinalDetail">—</p>
-        <div class="flex gap-16 jc-c" style="flex-wrap:wrap">
-          <button class="btn btn-outline btn-lg" id="quizRestart">Try Again</button>
-          <a href="index.html#signup" class="btn btn-primary btn-lg">Book a Session to Go Deeper &rarr;</a>
-        </div>
-      </div>
-    </div>
-  </div>
+ <!-- Results -->
+ <div class="quiz-results" id="quizResults">
+ <div class="badge badge-purple mb-24" style="margin:0 auto 24px">Quiz Complete</div>
+ <div class="quiz-results-score" id="quizFinalScore"></div>
+ <h3 class="display-sm mt-16" id="quizFinalMsg"></h3>
+ <p class="text-md muted mt-12 mb-32" id="quizFinalDetail"></p>
+ <div class="flex gap-16 jc-c" style="flex-wrap:wrap">
+ <button class="btn btn-outline btn-lg" id="quizRestart">Try Again</button>
+ <a href="index.html#signup" class="btn btn-primary btn-lg">Book a Session to Go Deeper &rarr;</a>
+ </div>
+ </div>
+ </div>
+ </div>
 </div>
 
 
 <!-- TOOL 5: POMODORO TIMER -->
 <div class="tool-panel" id="panel-pomodoro">
-  <div class="container">
-    <div class="mb-40">
-      <h2 class="display-md">Pomodoro Study Timer</h2>
-      <p class="text-lg muted mt-12">Work in focused 25-minute sessions with built-in breaks. The Pomodoro method is proven to improve focus and reduce burnout during study sessions.</p>
-    </div>
-    <div class="pomodoro-card">
-      <div class="pomodoro-mode-btns">
-        <button class="pomo-mode-btn active" data-duration="1500" data-label="Focus Session" onclick="setPomoMode(this,1500,'Focus Session')">Focus</button>
-        <button class="pomo-mode-btn" data-duration="300" data-label="Short Break" onclick="setPomoMode(this,300,'Short Break')">Short Break</button>
-        <button class="pomo-mode-btn" data-duration="900" data-label="Long Break" onclick="setPomoMode(this,900,'Long Break')">Long Break</button>
-      </div>
-      <div class="pomodoro-progress-ring">
-        <svg class="pomodoro-ring-svg" width="200" height="200" viewBox="0 0 200 200">
-          <defs>
-            <linearGradient id="pomRingGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-              <stop offset="0%" style="stop-color:#7C5CFC"/>
-              <stop offset="100%" style="stop-color:#38B6FF"/>
-            </linearGradient>
-          </defs>
-          <circle class="pomodoro-ring-bg" cx="100" cy="100" r="88"/>
-          <circle class="pomodoro-ring-fill" id="pomoRingFill" cx="100" cy="100" r="88" stroke-dasharray="552.9" stroke-dashoffset="0"/>
-        </svg>
-      </div>
-      <div class="pomodoro-mode" id="pomoModeLabel">Focus Session</div>
-      <div class="pomodoro-display" id="pomoDisplay">25:00</div>
-      <div class="pomodoro-session" id="pomoSession">Session 1 of 4 &mdash; complete 4 to earn a long break</div>
-      <div class="pomodoro-controls">
-        <button class="btn btn-outline btn-lg" id="pomoStartBtn" onclick="togglePomo()">Start</button>
-        <button class="btn btn-dark btn-lg" onclick="resetPomo()">Reset</button>
-      </div>
-    </div>
-    <div class="mt-32 text-center">
-      <p class="text-sm muted">After 4 focus sessions, take a 15-minute long break. During focus sessions, close all distractions and work on one subject only.</p>
-    </div>
-  </div>
+ <div class="container">
+ <div class="mb-40">
+ <h2 class="display-md">Pomodoro Study Timer</h2>
+ <p class="text-lg muted mt-12">Work in focused 25-minute sessions with built-in breaks. The Pomodoro method is proven to improve focus and reduce burnout during study sessions.</p>
+ </div>
+ <div class="pomodoro-card">
+ <div class="pomodoro-mode-btns">
+ <button class="pomo-mode-btn active" data-duration="1500" data-label="Focus Session" onclick="setPomoMode(this,1500,'Focus Session')">Focus</button>
+ <button class="pomo-mode-btn" data-duration="300" data-label="Short Break" onclick="setPomoMode(this,300,'Short Break')">Short Break</button>
+ <button class="pomo-mode-btn" data-duration="900" data-label="Long Break" onclick="setPomoMode(this,900,'Long Break')">Long Break</button>
+ </div>
+ <div class="pomodoro-progress-ring">
+ <svg class="pomodoro-ring-svg" width="200" height="200" viewBox="0 0 200 200">
+ <defs>
+ <linearGradient id="pomRingGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+ <stop offset="0%" style="stop-color:#7C5CFC"/>
+ <stop offset="100%" style="stop-color:#38B6FF"/>
+ </linearGradient>
+ </defs>
+ <circle class="pomodoro-ring-bg" cx="100" cy="100" r="88"/>
+ <circle class="pomodoro-ring-fill" id="pomoRingFill" cx="100" cy="100" r="88" stroke-dasharray="552.9" stroke-dashoffset="0"/>
+ </svg>
+ </div>
+ <div class="pomodoro-mode" id="pomoModeLabel">Focus Session</div>
+ <div class="pomodoro-display" id="pomoDisplay">25:00</div>
+ <div class="pomodoro-session" id="pomoSession">Session 1 of 4 complete 4 to earn a long break</div>
+ <div class="pomodoro-controls">
+ <button class="btn btn-outline btn-lg" id="pomoStartBtn" onclick="togglePomo()">Start</button>
+ <button class="btn btn-dark btn-lg" onclick="resetPomo()">Reset</button>
+ </div>
+ </div>
+ <div class="mt-32 text-center">
+ <p class="text-sm muted">After 4 focus sessions, take a 15-minute long break. During focus sessions, close all distractions and work on one subject only.</p>
+ </div>
+ </div>
 </div>
 
 <!-- ============================================================
-     BOTTOM CTA
-     ============================================================ -->
+ BOTTOM CTA
+ ============================================================ -->
 <section class="section" style="background: var(--c-dark); text-align: center;">
-  <div class="container-sm">
-    <div class="badge badge-purple mb-24" style="margin:0 auto 24px">Ready to level up?</div>
-    <h2 class="display-lg white">Tools help.<br><span class="grad-text">1-on-1 changes everything.</span></h2>
-    <p class="section-sub section-sub-white mt-16" style="margin:16px auto 40px">These tools are a starting point. Real score improvement comes from having someone who knows exactly where you lose points and builds every session around fixing that.</p>
-    <a href="index.html#signup" class="btn btn-primary btn-lg">Book My Free Intro Session &rarr;</a>
-  </div>
+ <div class="container-sm">
+ <div class="badge badge-purple mb-24" style="margin:0 auto 24px">Ready to level up?</div>
+ <h2 class="display-lg white">Tools help.<br><span class="grad-text">1-on-1 changes everything.</span></h2>
+ <p class="section-sub section-sub-white mt-16" style="margin:16px auto 40px">These tools are a starting point. Real score improvement comes from having someone who knows exactly where you lose points and builds every session around fixing that.</p>
+ <a href="index.html#signup" class="btn btn-primary btn-lg">Book My Free Intro Session &rarr;</a>
+ </div>
 </section>
 
 <!-- FOOTER -->
 <footer class="footer">
-  <div class="container">
-    <div class="footer-top">
-      <div class="footer-logo">
-        <img src="assets/tutortime-logo-transparent.png" alt="TutorTime">
-      </div>
-      <div class="footer-links">
-        <a href="index.html#how-it-works">How It Works</a>
-        <a href="study.html">Study Tools</a>
-        <a href="index.html#results">Results</a>
-        <a href="index.html#pricing">Pricing</a>
-        <a href="index.html#signup">Book a Session</a>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p class="footer-copy">&copy; 2025 TutorTime. All rights reserved.</p>
-      <p class="footer-tagline">1:1 Study Time. Better Together. 💙</p>
-    </div>
-  </div>
+ <div class="container">
+ <div class="footer-top">
+ <div class="footer-logo">
+ <img src="assets/tutortime-logo-transparent.png" alt="TutorTime">
+ </div>
+ <div class="footer-links">
+ <a href="index.html#how-it-works">How It Works</a>
+ <a href="study.html">Study Tools</a>
+ <a href="index.html#results">Results</a>
+ <a href="index.html#pricing">Pricing</a>
+ <a href="index.html#signup">Book a Session</a>
+ </div>
+ </div>
+ <div class="footer-bottom">
+ <p class="footer-copy">&copy; 2025 TutorTime. All rights reserved.</p>
+ <p class="footer-tagline">1:1 Study Time. Better Together. 💙</p>
+ </div>
+ </div>
 </footer>
 
 <script src="js/main.js"></script>
