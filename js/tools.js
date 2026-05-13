@@ -572,3 +572,84 @@ document.addEventListener('DOMContentLoaded', () => {
   const quizRestart = document.getElementById('quizRestart');
   if (quizRestart) quizRestart.addEventListener('click', restartQuiz);
 });
+
+/* ============================================================
+   POMODORO TIMER
+   ============================================================ */
+let pomoInterval = null;
+let pomoRunning = false;
+let pomoTotal = 1500;
+let pomoRemaining = 1500;
+let pomoSessions = 0;
+const POMO_CIRCUMFERENCE = 2 * Math.PI * 88; // 552.9
+
+function setPomoMode(btn, duration, label) {
+  document.querySelectorAll('.pomo-mode-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  pomoTotal = duration;
+  pomoRemaining = duration;
+  pomoRunning = false;
+  clearInterval(pomoInterval);
+  const startBtn = document.getElementById('pomoStartBtn');
+  if (startBtn) startBtn.textContent = 'Start';
+  const modeLabel = document.getElementById('pomoModeLabel');
+  if (modeLabel) modeLabel.textContent = label;
+  updatePomoDisplay();
+}
+
+function togglePomo() {
+  const btn = document.getElementById('pomoStartBtn');
+  if (pomoRunning) {
+    clearInterval(pomoInterval);
+    pomoRunning = false;
+    if (btn) btn.textContent = 'Resume';
+  } else {
+    pomoRunning = true;
+    if (btn) btn.textContent = 'Pause';
+    pomoInterval = setInterval(() => {
+      pomoRemaining--;
+      updatePomoDisplay();
+      if (pomoRemaining <= 0) {
+        clearInterval(pomoInterval);
+        pomoRunning = false;
+        if (btn) btn.textContent = 'Start';
+        const modeLabel = document.getElementById('pomoModeLabel');
+        const isBreak = modeLabel && (modeLabel.textContent.includes('Break'));
+        if (!isBreak) {
+          pomoSessions++;
+          const sessionEl = document.getElementById('pomoSession');
+          if (sessionEl) sessionEl.textContent = `Session ${pomoSessions} complete! Take a break.`;
+        }
+        // Try browser notification
+        if ('Notification' in window && Notification.permission === 'granted') {
+          new Notification('TutorTime Timer', { body: 'Session complete! Take a break.', icon: 'assets/tutortime-logo-transparent.png' });
+        }
+      }
+    }, 1000);
+  }
+}
+
+function resetPomo() {
+  clearInterval(pomoInterval);
+  pomoRunning = false;
+  pomoRemaining = pomoTotal;
+  const btn = document.getElementById('pomoStartBtn');
+  if (btn) btn.textContent = 'Start';
+  const sessionEl = document.getElementById('pomoSession');
+  if (sessionEl) sessionEl.textContent = `Session ${pomoSessions + 1} of 4 — complete 4 to earn a long break`;
+  updatePomoDisplay();
+}
+
+function updatePomoDisplay() {
+  const min = Math.floor(pomoRemaining / 60).toString().padStart(2, '0');
+  const sec = (pomoRemaining % 60).toString().padStart(2, '0');
+  const displayEl = document.getElementById('pomoDisplay');
+  if (displayEl) displayEl.textContent = `${min}:${sec}`;
+  // Update ring
+  const ring = document.getElementById('pomoRingFill');
+  if (ring) {
+    const progress = pomoRemaining / pomoTotal;
+    const offset = POMO_CIRCUMFERENCE * (1 - progress);
+    ring.style.strokeDashoffset = offset;
+  }
+}

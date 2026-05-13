@@ -59,6 +59,8 @@ function loadHeroStudent(i) {
   animateNumber(scoreEl, prev, s.score, 1100);
 
   if (nameEl) nameEl.textContent = s.name;
+  const nameEl2 = document.getElementById('heroStudentName2');
+  if (nameEl2) nameEl2.textContent = s.name;
   if (changeEl) changeEl.textContent = `+${s.score - s.prev} pts`;
 
   const bars = [
@@ -77,12 +79,13 @@ function loadHeroStudent(i) {
   });
 }
 
-// Init
-setTimeout(() => loadHeroStudent(0), 400);
+// Init immediately — no loading state
+loadHeroStudent(0);
+// Then cycle every 4 seconds
 setInterval(() => {
   heroIdx = (heroIdx + 1) % heroStudents.length;
   loadHeroStudent(heroIdx);
-}, 3800);
+}, 4000);
 
 /* ---- SIGNUP FORM ---- */
 const signupForm = document.getElementById('signupForm');

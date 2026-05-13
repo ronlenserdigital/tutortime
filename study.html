@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Study Hub — TutorTime</title>
   <meta name="description" content="Free ACT study tools: score estimator, section tracker, strategy flashcards, and practice quiz. No sign-up required.">
-  <link rel="icon" href="assets/logo.png">
+  <link rel="icon" href="assets/tutortime-logo-transparent.png">
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
@@ -15,7 +15,7 @@
   <div class="container">
     <div class="navbar-inner">
       <a href="index.html" class="navbar-logo">
-        <img src="assets/logo.png" alt="TutorTime">
+        <img src="assets/tutortime-logo-transparent.png" alt="TutorTime">
       </a>
       <ul class="navbar-links">
         <li><a href="index.html#how-it-works">How It Works</a></li>
@@ -65,6 +65,10 @@
       <button class="tool-nav-btn" data-tool="quiz">
         <span class="tool-nav-icon">📝</span>
         Practice Quiz
+      </button>
+      <button class="tool-nav-btn" data-tool="pomodoro">
+        <span class="tool-nav-icon">⏱️</span>
+        Pomodoro Timer
       </button>
     </div>
   </div>
@@ -482,6 +486,46 @@
   </div>
 </div>
 
+
+<!-- TOOL 5: POMODORO TIMER -->
+<div class="tool-panel" id="panel-pomodoro">
+  <div class="container">
+    <div class="mb-40">
+      <h2 class="display-md">Pomodoro Study Timer</h2>
+      <p class="text-lg muted mt-12">Work in focused 25-minute sessions with built-in breaks. The Pomodoro method is proven to improve focus and reduce burnout during study sessions.</p>
+    </div>
+    <div class="pomodoro-card">
+      <div class="pomodoro-mode-btns">
+        <button class="pomo-mode-btn active" data-duration="1500" data-label="Focus Session" onclick="setPomoMode(this,1500,'Focus Session')">Focus</button>
+        <button class="pomo-mode-btn" data-duration="300" data-label="Short Break" onclick="setPomoMode(this,300,'Short Break')">Short Break</button>
+        <button class="pomo-mode-btn" data-duration="900" data-label="Long Break" onclick="setPomoMode(this,900,'Long Break')">Long Break</button>
+      </div>
+      <div class="pomodoro-progress-ring">
+        <svg class="pomodoro-ring-svg" width="200" height="200" viewBox="0 0 200 200">
+          <defs>
+            <linearGradient id="pomRingGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" style="stop-color:#7C5CFC"/>
+              <stop offset="100%" style="stop-color:#38B6FF"/>
+            </linearGradient>
+          </defs>
+          <circle class="pomodoro-ring-bg" cx="100" cy="100" r="88"/>
+          <circle class="pomodoro-ring-fill" id="pomoRingFill" cx="100" cy="100" r="88" stroke-dasharray="552.9" stroke-dashoffset="0"/>
+        </svg>
+      </div>
+      <div class="pomodoro-mode" id="pomoModeLabel">Focus Session</div>
+      <div class="pomodoro-display" id="pomoDisplay">25:00</div>
+      <div class="pomodoro-session" id="pomoSession">Session 1 of 4 &mdash; complete 4 to earn a long break</div>
+      <div class="pomodoro-controls">
+        <button class="btn btn-outline btn-lg" id="pomoStartBtn" onclick="togglePomo()">Start</button>
+        <button class="btn btn-dark btn-lg" onclick="resetPomo()">Reset</button>
+      </div>
+    </div>
+    <div class="mt-32 text-center">
+      <p class="text-sm muted">After 4 focus sessions, take a 15-minute long break. During focus sessions, close all distractions and work on one subject only.</p>
+    </div>
+  </div>
+</div>
+
 <!-- ============================================================
      BOTTOM CTA
      ============================================================ -->
@@ -499,7 +543,7 @@
   <div class="container">
     <div class="footer-top">
       <div class="footer-logo">
-        <img src="assets/logo.png" alt="TutorTime">
+        <img src="assets/tutortime-logo-transparent.png" alt="TutorTime">
       </div>
       <div class="footer-links">
         <a href="index.html#how-it-works">How It Works</a>
