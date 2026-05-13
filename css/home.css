@@ -493,72 +493,224 @@
 .h-results-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
+  gap: 20px;
   align-items: start;
 }
 
-.h-testi-card {
-  background: rgba(255,255,255,0.04);
-  border: 1px solid rgba(255,255,255,0.08);
-  border-radius: 20px;
-  padding: 24px;
+/* ---- iOS iMESSAGE CARDS ---- */
+.ios-card {
+  background: #FFFFFF;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.35);
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  transition: transform 0.25s, border-color 0.25s;
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', sans-serif;
+  transition: transform 0.25s;
 }
-.h-testi-card:hover {
-  transform: translateY(-4px);
-  border-color: rgba(108,71,255,0.3);
-  background: rgba(108,71,255,0.04);
+.ios-card:hover { transform: translateY(-4px); }
+
+/* Dark-mode card (Mizzou) */
+.ios-card-dark {
+  background: #1C1C1E;
 }
 
-.h-msg-recv {
-  background: rgba(255,255,255,0.09);
-  border-radius: 18px 18px 18px 4px;
-  padding: 13px 16px;
-  font-size: 14px;
-  color: rgba(255,255,255,0.85);
-  line-height: 1.6;
-  align-self: flex-start;
-  max-width: 95%;
-}
-
-.h-msg-sent {
-  background: linear-gradient(135deg, #6C47FF, #38B6FF);
-  border-radius: 18px 18px 4px 18px;
-  padding: 13px 16px;
-  font-size: 14px;
-  color: white;
-  line-height: 1.6;
-  align-self: flex-end;
-  max-width: 80%;
-}
-
-.h-testi-foot {
+/* Header */
+.ios-hdr {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-top: 10px;
-  margin-top: auto;
-  border-top: 1px solid rgba(255,255,255,0.06);
+  padding: 10px 14px 8px;
+  border-bottom: 0.5px solid #C6C6C8;
+  background: #F2F2F7;
+  gap: 8px;
 }
 
-.h-testi-name {
-  font-size: 11px;
-  font-weight: 700;
-  color: rgba(255,255,255,0.3);
-  text-transform: uppercase;
-  letter-spacing: 1.2px;
+.ios-back {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  min-width: 36px;
 }
 
-.h-testi-score {
-  font-size: 11px;
-  font-weight: 700;
-  background: linear-gradient(135deg, #6C47FF, #38B6FF);
+.ios-back-num {
+  font-size: 16px;
+  color: #007AFF;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.ios-contact-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  gap: 3px;
+}
+
+.ios-avatar {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 600;
   color: white;
-  padding: 4px 12px;
-  border-radius: 50px;
+  flex-shrink: 0;
+}
+
+.ios-contact-name {
+  font-size: 12px;
+  font-weight: 600;
+  color: #000;
+  display: flex;
+  align-items: center;
+}
+
+.ios-hdr-icons {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-width: 36px;
+  justify-content: flex-end;
+}
+
+/* Messages area */
+.ios-msgs {
+  padding: 10px 10px 12px;
+  background: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  flex: 1;
+}
+.ios-card-dark .ios-msgs { background: #1C1C1E; }
+
+.ios-timestamp {
+  text-align: center;
+  font-size: 11px;
+  color: #8E8E93;
+  margin: 4px 0 8px;
+  font-weight: 400;
+}
+.ios-timestamp-dark { color: #636366; }
+
+.ios-recv {
+  background: #E5E5EA;
+  color: #000000;
+  border-radius: 18px 18px 18px 4px;
+  padding: 8px 12px;
+  font-size: 14px;
+  line-height: 1.4;
+  align-self: flex-start;
+  max-width: 88%;
+  word-break: break-word;
+}
+.ios-recv-dark {
+  background: #3A3A3C;
+  color: #FFFFFF;
+}
+
+/* Consecutive received (no tail) */
+.ios-recv-cont {
+  border-radius: 4px 18px 18px 4px;
+  margin-top: 2px;
+}
+
+.ios-sent {
+  background: #007AFF;
+  color: #FFFFFF;
+  border-radius: 18px 18px 4px 18px;
+  padding: 8px 12px;
+  font-size: 14px;
+  line-height: 1.4;
+  align-self: flex-end;
+  max-width: 80%;
+  word-break: break-word;
+}
+
+.ios-delivered {
+  text-align: right;
+  font-size: 10px;
+  color: #8E8E93;
+  padding-right: 2px;
+  margin-top: 1px;
+}
+
+/* Mini score report bubble */
+.ios-score-bubble {
+  background: #E5E5EA;
+  padding: 0;
+  border-radius: 12px 12px 12px 4px;
+  overflow: hidden;
+}
+.ios-score-bubble .ios-score-report {
+  width: 100%;
+}
+
+.ios-score-report {
+  background: #FFFFFF;
+  border: 0.5px solid #C6C6C8;
+  border-radius: 8px;
+  overflow: hidden;
+  font-size: 11px;
+}
+
+.ios-sr-title {
+  background: #F2F2F7;
+  color: #8E8E93;
+  font-size: 10px;
+  font-weight: 600;
+  padding: 6px 10px;
+  border-bottom: 0.5px solid #C6C6C8;
+  letter-spacing: 0.2px;
+}
+
+.ios-sr-composite {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 10px;
+  border-bottom: 0.5px solid #E5E5EA;
+  font-weight: 600;
+  font-size: 11px;
+  color: #000;
+}
+
+.ios-sr-num {
+  font-size: 20px;
+  font-weight: 800;
+  color: #000;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.ios-sr-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 4px 10px;
+  font-size: 10px;
+  color: #3C3C43;
+  border-bottom: 0.5px solid #F2F2F7;
+}
+.ios-sr-row:last-child { border-bottom: none; }
+
+/* Score tag below each card */
+.ios-score-tag {
+  background: #F2F2F7;
+  border-top: 0.5px solid #E5E5EA;
+  padding: 8px 14px;
+  font-size: 11px;
+  font-weight: 700;
+  color: #6C47FF;
+  text-align: center;
+  letter-spacing: 0.3px;
+}
+.ios-card-dark .ios-score-tag {
+  background: #2C2C2E;
+  border-top-color: #3A3A3C;
+  color: #A78BFA;
 }
 
 /* ---- PRICING ---- */
@@ -829,6 +981,7 @@
   .h-tools-top { grid-template-columns: 1fr; gap: 20px; }
   .h-tools-grid { grid-template-columns: repeat(2, 1fr); }
   .h-results-grid { grid-template-columns: 1fr 1fr; }
+  .ios-card { font-size: 13px; }
   .h-pricing-grid { grid-template-columns: 1fr; }
   .h-outcomes-grid { grid-template-columns: 1fr 1fr; }
   .h-outcome-item:nth-child(2) { border-right: none; }
