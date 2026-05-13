@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TutorTime — ACT, SAT & Subject Tutoring</title>
+  <meta name="description" content="1-on-1 personalized tutoring for ACT, SAT, and all subjects. Real results — students regularly score 3-5 points higher. Free intro session.">
+  <link rel="icon" href="assets/logo.png">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<!-- ============================================================
+     NAVBAR
+     ============================================================ -->
+<nav class="navbar" id="navbar">
+  <div class="container">
+    <div class="navbar-inner">
+      <a href="index.html" class="navbar-logo">
+        <img src="assets/logo.png" alt="TutorTime">
+      </a>
+      <ul class="navbar-links">
+        <li><a href="#how-it-works">How It Works</a></li>
+        <li><a href="study.html">Study Tools</a></li>
+        <li><a href="#results">Results</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+      </ul>
+      <div class="navbar-actions">
+        <a href="study.html" class="btn btn-outline btn-sm">Study Tools</a>
+        <a href="#signup" class="btn btn-primary btn-sm">Book Free Session</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- ============================================================
+     HERO
+     ============================================================ -->
+<section class="hero" id="home">
+  <div class="container">
+    <div class="hero-content">
+      <div>
+        <div class="hero-eyebrow">
+          <div class="pill-live">
+            <span class="dot"></span>
+            Booking sessions now &mdash; free intro available
+          </div>
+        </div>
+
+        <div class="hero-heading">
+          <h1 class="display-xl">
+            Study smart.<br>
+            <span class="grad-text">Score higher.</span>
+          </h1>
+        </div>
+
+        <p class="hero-sub">
+          1-on-1 personalized tutoring for ACT, SAT, and every subject in between.
+          Real strategies, real accountability, real results — not generic prep books.
+        </p>
+
+        <div class="hero-ctas">
+          <a href="#signup" class="btn btn-primary btn-lg">Book My Free Intro Session &rarr;</a>
+          <a href="study.html" class="btn btn-ghost btn-lg">Try Study Tools Free</a>
+        </div>
+
+        <div class="hero-trust mt-40">
+          <div class="hero-trust-scores">
+            <div class="score-avatar av-1">IB</div>
+            <div class="score-avatar av-2">SG</div>
+            <div class="score-avatar av-3">HM</div>
+            <div class="score-avatar av-4">TB</div>
+            <div class="score-avatar av-5">AG</div>
+          </div>
+          <p class="hero-trust-text">
+            <strong>Students scoring 30, 31, 32</strong> — plus a $17K scholarship won
+          </p>
+        </div>
+      </div>
+
+      <!-- APP CARD -->
+      <div class="hero-card fade-up delay-2">
+        <div class="hero-card-header">
+          <div class="hero-card-dots">
+            <span class="dot-red"></span>
+            <span class="dot-yellow"></span>
+            <span class="dot-green"></span>
+          </div>
+          <span class="hero-card-title">Recent Student Results</span>
+        </div>
+
+        <div class="hero-card-body">
+          <div class="score-showcase">
+            <div class="score-showcase-num" id="heroScoreNum">28</div>
+            <div class="score-showcase-meta">
+              <div class="score-showcase-label">Composite Score</div>
+              <div class="score-showcase-name" id="heroStudentName">Loading...</div>
+              <div class="score-showcase-change" id="heroScoreChange">+3 pts</div>
+            </div>
+          </div>
+
+          <div class="subject-bars">
+            <div class="subject-bar-row">
+              <span class="subject-bar-label">English</span>
+              <div class="subject-bar-track"><div class="subject-bar-fill" id="barEng" style="width: 0%"></div></div>
+              <span class="subject-bar-val" id="barEngVal">—</span>
+            </div>
+            <div class="subject-bar-row">
+              <span class="subject-bar-label">Math</span>
+              <div class="subject-bar-track"><div class="subject-bar-fill" id="barMath" style="width: 0%"></div></div>
+              <span class="subject-bar-val" id="barMathVal">—</span>
+            </div>
+            <div class="subject-bar-row">
+              <span class="subject-bar-label">Reading</span>
+              <div class="subject-bar-track"><div class="subject-bar-fill" id="barRead" style="width: 0%"></div></div>
+              <span class="subject-bar-val" id="barReadVal">—</span>
+            </div>
+            <div class="subject-bar-row">
+              <span class="subject-bar-label">Science</span>
+              <div class="subject-bar-track"><div class="subject-bar-fill" id="barSci" style="width: 0%"></div></div>
+              <span class="subject-bar-val" id="barSciVal">—</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-card-footer">
+          <span class="hero-card-footer-text">Showing: <span class="cycling-name" id="heroStudentName2">Isabella B.</span></span>
+          <span class="badge badge-green">✓ Real Result</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     TICKER
+     ============================================================ -->
+<div class="ticker-strip">
+  <div class="ticker-track">
+    <span class="ticker-item">🎉 Isabella &mdash; scored a 31 <span class="ticker-sep">·</span></span>
+    <span class="ticker-item">🏆 Sydney &mdash; 32 composite <span class="ticker-sep">·</span></span>
+    <span class="ticker-item">⭐ Hannah &mdash; 32, top Bama scholarship tier <span class="ticker-sep">·</span></span>
+    <span class="ticker-item">📈 Tessa &mdash; scored a 31 <span class="ticker-sep">·</span></span>
+    <span class="ticker-item">🎓 Aidan &mdash; improved to a 30 <span class="ticker-sep">·</span></span>
+    <span class="ticker-item">💰 $17,000 yearly scholarship to Mizzou unlocked <span class="ticker-sep">·</span></span>
+    <span class="ticker-item">🎉 Isabella &mdash; scored a 31 <span class="ticker-sep">·</span></span>
+    <span class="ticker-item">🏆 Sydney &mdash; 32 composite <span class="ticker-sep">·</span></span>
+    <span class="ticker-item">⭐ Hannah &mdash; 32, top Bama scholarship tier <span class="ticker-sep">·</span></span>
+    <span class="ticker-item">📈 Tessa &mdash; scored a 31 <span class="ticker-sep">·</span></span>
+    <span class="ticker-item">🎓 Aidan &mdash; improved to a 30 <span class="ticker-sep">·</span></span>
+    <span class="ticker-item">💰 $17,000 yearly scholarship to Mizzou unlocked <span class="ticker-sep">·</span></span>
+  </div>
+</div>
+
+<!-- ============================================================
+     STATS ROW
+     ============================================================ -->
+<div class="stats-row">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat-item fade-up">
+        <div class="stat-number">32</div>
+        <div class="stat-label">Highest composite score achieved by a TutorTime student</div>
+      </div>
+      <div class="stat-item fade-up delay-1">
+        <div class="stat-number">+5</div>
+        <div class="stat-label">Average point improvement after consistent sessions</div>
+      </div>
+      <div class="stat-item fade-up delay-2">
+        <div class="stat-number">$17K</div>
+        <div class="stat-label">Yearly scholarship earned by one of our students</div>
+      </div>
+      <div class="stat-item fade-up delay-3">
+        <div class="stat-number">All</div>
+        <div class="stat-label">Subjects covered &mdash; ACT, SAT, Math, English, Science &amp; more</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================
+     HOW IT WORKS
+     ============================================================ -->
+<section class="section section-tinted" id="how-it-works">
+  <div class="container">
+    <div class="section-header fade-up">
+      <div class="badge badge-purple mb-16">Simple Process</div>
+      <h2 class="display-lg">
+        From sign-up to a<br>
+        <span class="grad-text">higher score</span> — 3 steps
+      </h2>
+      <p class="section-sub">No long-term contracts, no awkward sales calls. Just show up, work hard, and watch your score move.</p>
+    </div>
+
+    <div class="grid-3">
+      <div class="step-card fade-up delay-1">
+        <div class="step-icon">📋</div>
+        <div class="step-num">01</div>
+        <div class="step-title">Tell us your goals</div>
+        <p class="step-desc">Fill out the quick signup form. Your current score, target score, what you need help with. Takes 90 seconds.</p>
+      </div>
+      <div class="step-card fade-up delay-2">
+        <div class="step-icon">📞</div>
+        <div class="step-num">02</div>
+        <div class="step-title">Free intro session</div>
+        <p class="step-desc">We'll reach out within 24 hours and schedule your first session on us. No cost, no commitment — just see if it works for you.</p>
+      </div>
+      <div class="step-card fade-up delay-3">
+        <div class="step-icon">📈</div>
+        <div class="step-num">03</div>
+        <div class="step-title">Watch your score climb</div>
+        <p class="step-desc">Live 1-on-1 sessions built entirely around your weak spots. Students regularly score 3–5 points higher in just a few weeks.</p>
+      </div>
+    </div>
+
+    <!-- Study tools CTA -->
+    <div class="mt-40 text-center fade-up">
+      <p class="text-md mb-16">Want to see how you stack up right now?</p>
+      <a href="study.html" class="btn btn-primary btn-lg">Try Free Study Tools &rarr;</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     RESULTS / TESTIMONIALS
+     ============================================================ -->
+<section class="section section-dark" id="results">
+  <div class="container">
+    <div class="section-header section-header-center fade-up">
+      <div class="badge badge-purple mb-16">Real Results</div>
+      <h2 class="display-lg white">They texted when they found out</h2>
+      <p class="section-sub section-sub-white text-center">Every message below is 100% unedited — straight from students' phones the day their scores came back.</p>
+    </div>
+
+    <div class="testi-grid">
+      <div class="testi-card fade-up delay-1">
+        <div class="msg-bubble-recv">I just got my ACT score back and got a 31! Thank you so much for everything! I will definitely recommend you to my friends! 🎉</div>
+        <div class="msg-bubble-sent">That's amazing!! Knew you had it 🙌</div>
+        <div class="testi-footer">
+          <span class="testi-name">Isabella B.</span>
+          <span class="badge badge-score">31 Composite</span>
+        </div>
+      </div>
+
+      <div class="testi-card fade-up delay-2">
+        <div class="msg-bubble-recv">!!!!!!! <br><small style="opacity:0.5">(sends score report screenshot)</small></div>
+        <div class="msg-bubble-sent">Yay!!!</div>
+        <div class="msg-bubble-recv">Thank you SO much for all the help 🙏</div>
+        <div class="msg-bubble-sent">You're welcome :)</div>
+        <div class="testi-footer">
+          <span class="testi-name">Sydney G.</span>
+          <span class="badge badge-score">32 Composite</span>
+        </div>
+      </div>
+
+      <div class="testi-card fade-up delay-3">
+        <div class="msg-bubble-recv">Hannah made a 32 on the ACT — that gets her to the top scholarship tier for Bama! You helped her so much. Can't thank you enough!</div>
+        <div class="testi-footer">
+          <span class="testi-name">Hannah's Mom</span>
+          <span class="badge badge-score">32 · Top Bama Tier</span>
+        </div>
+      </div>
+
+      <div class="testi-card fade-up delay-1">
+        <div class="msg-bubble-recv">Oh my gosh!!!!!!! Thank you so much!! <br><small style="opacity:0.5">(shares 31 score report)</small></div>
+        <div class="msg-bubble-sent">awesome!</div>
+        <div class="testi-footer">
+          <span class="testi-name">Tessa B.</span>
+          <span class="badge badge-score">31 Composite</span>
+        </div>
+      </div>
+
+      <div class="testi-card fade-up delay-2">
+        <div class="msg-bubble-recv">i totally forgot to text you didn't i 😅 i did better in every section except science and got a 30 — 34 english, 33 math, 29 reading!</div>
+        <div class="testi-footer">
+          <span class="testi-name">Aidan G.</span>
+          <span class="badge badge-score">30 Composite</span>
+        </div>
+      </div>
+
+      <div class="testi-card fade-up delay-3">
+        <div class="msg-bubble-recv">I just found out my ACT score helped me qualify for a $17,000 yearly scholarship to Mizzou which is my top school! I just thought I'd let you know what I was working toward. Thanks again for everything 🥰💛</div>
+        <div class="msg-bubble-sent">That's amazing :) you're welcome</div>
+        <div class="testi-footer">
+          <span class="testi-name">Anonymous Student</span>
+          <span class="badge badge-score">$17K Scholarship</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     PRICING
+     ============================================================ -->
+<section class="section" id="pricing">
+  <div class="container">
+    <div class="section-header section-header-center fade-up">
+      <div class="badge badge-purple mb-16">Pricing</div>
+      <h2 class="display-lg">Simple, transparent rates</h2>
+      <p class="section-sub">No packages you have to buy upfront. No hidden fees. Just $75 per hour, with a referral program that rewards you for spreading the word.</p>
+    </div>
+
+    <div class="pricing-grid fade-up delay-1">
+      <div class="pricing-card">
+        <div class="pricing-label">Per Session</div>
+        <div class="pricing-name">1-on-1 Tutoring</div>
+        <div class="pricing-amount">
+          <span class="pricing-amount-currency">$</span>75
+          <span class="pricing-amount-per">/hour</span>
+        </div>
+        <div class="pricing-divider"></div>
+        <ul class="pricing-features">
+          <li class="pricing-feature"><div class="feature-check">✓</div> ACT &amp; SAT full test prep</li>
+          <li class="pricing-feature"><div class="feature-check">✓</div> Homework help — all subjects</li>
+          <li class="pricing-feature"><div class="feature-check">✓</div> Personalized plan built around your weaknesses</li>
+          <li class="pricing-feature"><div class="feature-check">✓</div> Live 1-on-1 via video call</li>
+          <li class="pricing-feature"><div class="feature-check">✓</div> Score tracking &amp; progress notes after each session</li>
+          <li class="pricing-feature"><div class="feature-check">✓</div> First intro session completely free</li>
+        </ul>
+        <a href="#signup" class="btn btn-primary btn-lg mt-32" style="width:100%; justify-content:center;">Get Started &rarr;</a>
+      </div>
+
+      <div class="pricing-card dark">
+        <div class="pricing-label">🎁 Referral Program</div>
+        <div class="pricing-name">Refer a Friend.<br>Get a Free Session.</div>
+
+        <div class="pricing-divider"></div>
+
+        <div class="referral-steps">
+          <div class="referral-step">
+            <div class="referral-step-num">1</div>
+            <div>
+              <div class="referral-step-title">Refer a friend or classmate</div>
+              <div class="referral-step-sub">Just tell them about TutorTime and have them sign up</div>
+            </div>
+          </div>
+          <div class="referral-step">
+            <div class="referral-step-num">2</div>
+            <div>
+              <div class="referral-step-title">They complete 3 sessions</div>
+              <div class="referral-step-sub">Your referral books and attends three full sessions</div>
+            </div>
+          </div>
+          <div class="referral-step">
+            <div class="referral-step-num">3</div>
+            <div>
+              <div class="referral-step-title">You get a free session 🎉</div>
+              <div class="referral-step-sub">A $75 credit — no limit on how many times you can earn it</div>
+            </div>
+          </div>
+        </div>
+
+        <div style="margin-top:24px; background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.08); border-radius:var(--r-md); padding:16px;">
+          <p style="font-size:13px; color:rgba(255,255,255,0.4); text-align:center; line-height:1.6;">
+            No cap on referrals. Every single friend who stays for 3 sessions earns you another free hour.
+          </p>
+        </div>
+
+        <a href="#signup" class="btn btn-white btn-lg mt-24" style="width:100%; justify-content:center;">Book &amp; Start Referring &rarr;</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     SIGNUP FORM
+     ============================================================ -->
+<section class="section form-section" id="signup">
+  <div class="container-sm">
+    <div class="section-header section-header-center fade-up">
+      <div class="badge badge-purple mb-16">Get Started</div>
+      <h2 class="display-lg">Book your free intro session</h2>
+      <p class="section-sub">We'll reach out within 24 hours to schedule. No payment needed, no long-term commitment — just come try it.</p>
+    </div>
+
+    <div class="form-card fade-up delay-1">
+      <form id="signupForm" class="form-grid">
+        <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_KEY">
+        <input type="hidden" name="subject" value="New TutorTime Session Request">
+        <input type="hidden" name="from_name" value="TutorTime Website">
+
+        <div class="form-field">
+          <label class="form-label">First Name *</label>
+          <input type="text" class="form-input" name="first_name" placeholder="Emma" required>
+        </div>
+        <div class="form-field">
+          <label class="form-label">Last Name *</label>
+          <input type="text" class="form-input" name="last_name" placeholder="Johnson" required>
+        </div>
+
+        <div class="form-field">
+          <label class="form-label">Email Address *</label>
+          <input type="email" class="form-input" name="email" placeholder="emma@gmail.com" required>
+        </div>
+        <div class="form-field">
+          <label class="form-label">Phone Number</label>
+          <input type="tel" class="form-input" name="phone" placeholder="(540) 000-0000">
+        </div>
+
+        <div class="form-field">
+          <label class="form-label">Current Grade</label>
+          <select class="form-select" name="grade">
+            <option value="">Select your grade...</option>
+            <option>8th Grade</option>
+            <option>9th Grade (Freshman)</option>
+            <option>10th Grade (Sophomore)</option>
+            <option>11th Grade (Junior)</option>
+            <option>12th Grade (Senior)</option>
+            <option>College Student</option>
+          </select>
+        </div>
+        <div class="form-field">
+          <label class="form-label">What do you need help with?</label>
+          <select class="form-select" name="subject_help">
+            <option value="">Select subject...</option>
+            <option>ACT — Full Test</option>
+            <option>ACT — English</option>
+            <option>ACT — Math</option>
+            <option>ACT — Reading</option>
+            <option>ACT — Science</option>
+            <option>SAT — Full Test</option>
+            <option>SAT — Math</option>
+            <option>SAT — Reading &amp; Writing</option>
+            <option>General Math (Algebra / Geometry / Pre-Calc)</option>
+            <option>General English / Writing</option>
+            <option>Science (Biology / Chemistry / Physics)</option>
+            <option>Multiple Subjects</option>
+          </select>
+        </div>
+
+        <div class="form-field">
+          <label class="form-label">Current ACT / SAT Score</label>
+          <input type="text" class="form-input" name="current_score" placeholder="e.g. 24 ACT or 1150 SAT (leave blank if not taken)">
+        </div>
+        <div class="form-field">
+          <label class="form-label">Target Score / Goal</label>
+          <input type="text" class="form-input" name="target_score" placeholder="e.g. 30 ACT for Virginia Tech scholarship">
+        </div>
+
+        <div class="form-field span-2">
+          <label class="form-label">Anything else we should know?</label>
+          <textarea class="form-textarea" name="message" placeholder="Test date coming up, scheduling preferences, specific weak spots, how you heard about us..."></textarea>
+        </div>
+
+        <div class="form-field span-2">
+          <button type="submit" class="form-submit">Request My Free Intro Session &rarr;</button>
+        </div>
+      </form>
+
+      <div class="form-success" id="formSuccess">
+        <div class="form-success-icon">🎉</div>
+        <h3 class="display-sm">You're all set!</h3>
+        <p class="text-md muted mt-12">We received your request and will reach out within 24 hours to schedule your free intro session. Check your email!</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     FOOTER
+     ============================================================ -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-logo">
+        <img src="assets/logo.png" alt="TutorTime">
+      </div>
+      <div class="footer-links">
+        <a href="#how-it-works">How It Works</a>
+        <a href="study.html">Study Tools</a>
+        <a href="#results">Results</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#signup">Book a Session</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">&copy; 2025 TutorTime. All rights reserved.</p>
+      <p class="footer-tagline">1:1 Study Time. Better Together. 💙</p>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
