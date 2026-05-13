@@ -40,7 +40,7 @@
         <span class="grad-text">Zero cost.</span>
       </h1>
       <p class="hero-sub mt-16" style="max-width: 560px;">
-        Four real study tools built for ACT prep. No account needed, no ads, just tools that work. Use these between sessions to maximize your gains.
+        Real ACT prep tools. No account needed, no ads, no fluff — just tools that help you actually study.
       </p>
     </div>
   </div>
@@ -60,7 +60,7 @@
       </button>
       <button class="tool-nav-btn" data-tool="flashcards">
         <span class="tool-nav-icon">⚡</span>
-        Strategy Flashcards
+        ACT Study Flashcards
       </button>
       <button class="tool-nav-btn" data-tool="quiz">
         <span class="tool-nav-icon">📝</span>
@@ -94,10 +94,10 @@
               <div class="est-row-icon">📝</div>
               English
             </div>
-            <span class="est-row-max">75 questions</span>
+            <span class="est-row-max">50 questions</span>
           </div>
           <div class="est-input-wrap">
-            <input type="number" class="est-num-input" id="estEngInput" min="0" max="75" placeholder="0">
+            <input type="number" class="est-num-input" id="estEngInput" min="0" max="50" placeholder="0">
             <div class="est-bar-wrap">
               <div class="est-bar-track">
                 <div class="est-bar-fill" id="estEngBar" style="width: 0%"></div>
@@ -113,10 +113,10 @@
               <div class="est-row-icon">➗</div>
               Mathematics
             </div>
-            <span class="est-row-max">60 questions</span>
+            <span class="est-row-max">45 questions</span>
           </div>
           <div class="est-input-wrap">
-            <input type="number" class="est-num-input" id="estMathInput" min="0" max="60" placeholder="0">
+            <input type="number" class="est-num-input" id="estMathInput" min="0" max="45" placeholder="0">
             <div class="est-bar-wrap">
               <div class="est-bar-track">
                 <div class="est-bar-fill" id="estMathBar" style="width: 0%"></div>
@@ -132,10 +132,10 @@
               <div class="est-row-icon">📖</div>
               Reading
             </div>
-            <span class="est-row-max">40 questions</span>
+            <span class="est-row-max">36 questions</span>
           </div>
           <div class="est-input-wrap">
-            <input type="number" class="est-num-input" id="estReadInput" min="0" max="40" placeholder="0">
+            <input type="number" class="est-num-input" id="estReadInput" min="0" max="36" placeholder="0">
             <div class="est-bar-wrap">
               <div class="est-bar-track">
                 <div class="est-bar-fill" id="estReadBar" style="width: 0%"></div>
@@ -336,7 +336,7 @@
 <div class="tool-panel" id="panel-flashcards">
   <div class="container">
     <div class="mb-40">
-      <h2 class="display-md">Strategy Flashcards</h2>
+      <h2 class="display-md">ACT Study Flashcards</h2>
       <p class="text-lg muted mt-12">12 proven ACT strategies used by students who score 30+. Click a card to flip it, mark whether you knew it, and track your progress.</p>
     </div>
 
@@ -344,75 +344,101 @@
       <!-- MAIN FLASHCARD -->
       <div class="flashcard-main">
 
+        <!-- Progress bar -->
         <div class="flashcard-progress">
-          <span class="flashcard-progress-text">Card <span id="fcCardNum">1</span> of <span id="fcCardTotal">12</span></span>
+          <span class="flashcard-progress-text">Card <span id="fcCardNum">1</span> of <span id="fcCardTotal">80</span></span>
           <div class="flashcard-progress-bar-wrap">
-            <div class="flashcard-progress-bar" id="fcProgressBar" style="width: 8%"></div>
+            <div class="flashcard-progress-bar" id="fcProgressBar" style="width:1%"></div>
           </div>
-          <span class="flashcard-progress-count" id="fcCardNum2">1/12</span>
+          <span class="flashcard-progress-count" id="fcFilterTotal">80 cards</span>
         </div>
 
+        <!-- Card -->
         <div class="flashcard-scene">
           <div class="flashcard" id="flashcard">
+
+            <!-- FRONT -->
             <div class="card-face card-front">
-              <div class="card-subject-tag" id="cardSubject">English</div>
+              <div class="fc-front-badges">
+                <span class="fc-badge-subject" id="cardSubject">English</span>
+                <span class="fc-badge-topic" id="cardTopic">Subject-Verb Agreement</span>
+                <span class="fc-diff-badge" id="cardDifficulty">Easy</span>
+              </div>
               <div class="card-question" id="cardQuestion">Loading...</div>
-              <div class="card-hint" id="fcFlipHint">Tap to reveal strategy 👇</div>
+              <div class="card-hint" id="fcFlipHint">
+                <span>👆 Tap to flip</span>
+              </div>
             </div>
+
+            <!-- BACK -->
             <div class="card-face card-back">
-              <div class="card-subject-tag">Strategy</div>
-              <div class="card-question" id="cardAnswer">Loading...</div>
+              <div class="fc-back-inner">
+                <div class="fc-back-answer" id="cardAnswer">Loading...</div>
+                <div class="fc-back-example">
+                  <div class="fc-back-example-label">Example</div>
+                  <div class="fc-back-example-text" id="cardExample"></div>
+                </div>
+                <div class="fc-back-why">
+                  <span class="fc-back-why-label">Why it matters on the ACT:</span>
+                  <span id="cardWhy"></span>
+                </div>
+              </div>
             </div>
+
           </div>
         </div>
 
-        <!-- Result buttons (shown after flip) -->
+        <!-- Result buttons (appear after flip) -->
         <div class="flashcard-result-btns" id="fcResultBtns" style="display:none">
           <button class="btn-knew-it" id="fcKnewIt">✓ Got it</button>
           <button class="btn-missed-it" id="fcMissedIt">✗ Missed it</button>
+          <button class="btn-star" id="fcStarBtn">☆ Star</button>
         </div>
 
+        <!-- Navigation -->
         <div class="flashcard-controls">
           <button class="btn btn-outline" id="fcPrev">← Prev</button>
           <button class="btn btn-primary" id="fcNext">Next →</button>
         </div>
+
+        <!-- Credibility note -->
+        <p class="fc-disclaimer">These are original TutorTime study materials based on skills commonly tested on the ACT. They are not copied from official ACT test questions.</p>
       </div>
 
       <!-- SIDEBAR -->
       <div class="flashcard-sidebar">
-        <div class="fc-category-list">
-          <h4>Filter by Subject</h4>
-          <button class="fc-category-btn active" data-category="All">
-            All Strategies
-            <span class="fc-category-count">12</span>
-          </button>
-          <button class="fc-category-btn" data-category="English">
-            📝 English
-            <span class="fc-category-count">3</span>
-          </button>
-          <button class="fc-category-btn" data-category="Math">
-            ➗ Math
-            <span class="fc-category-count">3</span>
-          </button>
-          <button class="fc-category-btn" data-category="Reading">
-            📖 Reading
-            <span class="fc-category-count">3</span>
-          </button>
-          <button class="fc-category-btn" data-category="Science">
-            🔬 Science
-            <span class="fc-category-count">2</span>
-          </button>
-          <button class="fc-category-btn" data-category="Test Day">
-            📅 Test Day
-            <span class="fc-category-count">1</span>
-          </button>
+
+        <!-- Subject filters -->
+        <div class="fc-filter-card">
+          <div class="fc-filter-label">Filter by Subject</div>
+          <div class="fc-filter-btns">
+            <button class="fc-subject-btn active" data-value="All">All</button>
+            <button class="fc-subject-btn" data-value="English">📝 English</button>
+            <button class="fc-subject-btn" data-value="Math">➗ Math</button>
+            <button class="fc-subject-btn" data-value="Reading">📖 Reading</button>
+            <button class="fc-subject-btn" data-value="Science">🔬 Science</button>
+            <button class="fc-subject-btn" data-value="Strategy Tips">🎯 Strategy</button>
+            <button class="fc-subject-btn" data-value="Starred">★ Starred</button>
+          </div>
         </div>
 
+        <!-- Difficulty filters -->
+        <div class="fc-filter-card">
+          <div class="fc-filter-label">Filter by Difficulty</div>
+          <div class="fc-filter-btns">
+            <button class="fc-diff-btn active" data-value="All">All</button>
+            <button class="fc-diff-btn" data-value="Easy">Easy</button>
+            <button class="fc-diff-btn" data-value="Medium">Medium</button>
+            <button class="fc-diff-btn" data-value="Hard">Hard</button>
+          </div>
+        </div>
+
+        <!-- Session Stats -->
         <div class="fc-stats-card">
           <h4>Session Stats</h4>
           <div class="fc-stat-row">
-            <span class="fc-stat-label">Cards reviewed</span>
-            <span class="fc-stat-val" id="fcStatTotal">0</span>
+            <span class="fc-stat-label">Reviewed</span>
+            <span class="fc-stat-val" id="fcStatReviewed">0</span>
           </div>
           <div class="fc-stat-row">
             <span class="fc-stat-label" style="color:var(--c-green)">✓ Got it</span>
@@ -422,7 +448,28 @@
             <span class="fc-stat-label" style="color:var(--c-red)">✗ Missed</span>
             <span class="fc-stat-val" style="color:var(--c-red)" id="fcStatWrong">0</span>
           </div>
+          <div class="fc-stat-row">
+            <span class="fc-stat-label">Accuracy</span>
+            <span class="fc-stat-val" id="fcStatAccuracy">—</span>
+          </div>
+          <div class="fc-stat-row">
+            <span class="fc-stat-label">★ Starred</span>
+            <span class="fc-stat-val" id="fcStatStarred">0</span>
+          </div>
         </div>
+
+        <!-- Breakdown -->
+        <div class="fc-filter-card" style="margin-top:0">
+          <div class="fc-filter-label">Card Breakdown</div>
+          <div style="font-size:13px; color:var(--c-muted); display:flex; flex-direction:column; gap:6px; margin-top:4px;">
+            <div style="display:flex;justify-content:space-between;"><span>📝 English</span><span style="font-weight:700;color:var(--c-dark)">25</span></div>
+            <div style="display:flex;justify-content:space-between;"><span>➗ Math</span><span style="font-weight:700;color:var(--c-dark)">30</span></div>
+            <div style="display:flex;justify-content:space-between;"><span>📖 Reading</span><span style="font-weight:700;color:var(--c-dark)">12</span></div>
+            <div style="display:flex;justify-content:space-between;"><span>🔬 Science</span><span style="font-weight:700;color:var(--c-dark)">10</span></div>
+            <div style="display:flex;justify-content:space-between;"><span>🎯 Strategy</span><span style="font-weight:700;color:var(--c-dark)">8</span></div>
+          </div>
+        </div>
+
       </div>
     </div>
   </div>
