@@ -2045,3 +2045,21 @@ ul { list-style: none; }
   .fc-filter-btns { gap: 4px; }
   .fc-subject-btn, .fc-diff-btn { font-size: 12px; padding: 6px 10px; }
 }
+
+/* ---- QUIZ sentence with underline support ---- */
+.quiz-sentence {
+  display: block;
+  margin-top: 8px;
+  font-style: italic;
+  color: var(--c-body);
+  line-height: 1.6;
+}
+.quiz-q-text u {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* ---- Flashcard answer — support newlines in content ---- */
+.fc-back-answer {
+  white-space: pre-line;
+}
