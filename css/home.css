@@ -6,11 +6,11 @@
 /* ---- SHARED OVERRIDES ---- */
 .navbar-links a { font-size: 14px; font-weight: 500; }
 .btn-primary {
-  background: #6C47FF;
+  background: #6366F1;
   border-radius: 8px;
 }
 .btn-primary:hover {
-  background: #5A35EE;
+  background: #4F46E5;
   box-shadow: 0 6px 20px rgba(108,71,255,0.3);
 }
 
@@ -69,7 +69,7 @@
   display: inline-flex;
   align-items: center;
   padding: 14px 28px;
-  background: #6C47FF;
+  background: #6366F1;
   color: #FFFFFF;
   font-family: 'Figtree', sans-serif;
   font-size: 15px;
@@ -79,7 +79,7 @@
   transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
 }
 .h-cta-primary:hover {
-  background: #5A35EE;
+  background: #4F46E5;
   transform: translateY(-1px);
   box-shadow: 0 6px 20px rgba(108,71,255,0.3);
 }
@@ -179,7 +179,7 @@
   width: 38px;
   height: 38px;
   border-radius: 50%;
-  background: linear-gradient(135deg, #6C47FF, #38B6FF);
+  background: linear-gradient(135deg, #6366F1, #38B6FF);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -264,7 +264,7 @@
 
 .h-sc-bfill {
   height: 100%;
-  background: #6C47FF;
+  background: #6366F1;
   border-radius: 2px;
 }
 
@@ -328,7 +328,7 @@
 .h-section-label {
   font-size: 11px;
   font-weight: 700;
-  color: #6C47FF;
+  color: #6366F1;
   text-transform: uppercase;
   letter-spacing: 1.8px;
   margin-bottom: 14px;
@@ -364,7 +364,7 @@
   font-family: 'Bricolage Grotesque', sans-serif;
   font-size: 44px;
   font-weight: 800;
-  color: #6C47FF;
+  color: #6366F1;
   opacity: 0.18;
   letter-spacing: -2px;
   line-height: 1;
@@ -436,7 +436,7 @@
 }
 
 .h-tool-card:hover {
-  border-color: #6C47FF;
+  border-color: #6366F1;
   box-shadow: 0 4px 18px rgba(108,71,255,0.09);
   transform: translateY(-2px);
 }
@@ -449,7 +449,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #6C47FF;
+  color: #6366F1;
   flex-shrink: 0;
 }
 
@@ -472,7 +472,7 @@
 .h-tc-link {
   font-size: 12px;
   font-weight: 600;
-  color: #6C47FF;
+  color: #6366F1;
   display: block;
 }
 
@@ -703,7 +703,7 @@
   padding: 8px 14px;
   font-size: 11px;
   font-weight: 700;
-  color: #6C47FF;
+  color: #6366F1;
   text-align: center;
   letter-spacing: 0.3px;
 }
@@ -747,7 +747,7 @@
 .h-price-label {
   font-size: 10px;
   font-weight: 700;
-  color: #6C47FF;
+  color: #6366F1;
   text-transform: uppercase;
   letter-spacing: 1.8px;
   margin-bottom: 10px;
@@ -820,7 +820,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #6C47FF;
+  color: #6366F1;
   flex-shrink: 0;
   margin-top: 1px;
 }
@@ -911,7 +911,7 @@
   font-weight: 500;
   margin-top: 20px;
 }
-.h-form-trust svg { color: #6C47FF; flex-shrink: 0; }
+.h-form-trust svg { color: #6366F1; flex-shrink: 0; }
 
 .h-form-card {
   background: white;
@@ -932,7 +932,7 @@
 .h-form-card .form-input:focus,
 .h-form-card .form-select:focus,
 .h-form-card .form-textarea:focus {
-  border-color: #6C47FF;
+  border-color: #6366F1;
 }
 .h-form-card .form-label {
   font-size: 12px;
@@ -941,31 +941,15 @@
   letter-spacing: 0.2px;
 }
 .h-form-card .form-submit {
-  background: #6C47FF;
+  background: #6366F1;
   border-radius: 8px;
   font-size: 15px;
 }
 .h-form-card .form-submit:hover {
-  background: #5A35EE;
+  background: #4F46E5;
 }
 
-/* ---- FOOTER UPDATES ---- */
-.footer-brand {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-.footer-desc {
-  font-size: 13px;
-  color: rgba(255,255,255,0.28);
-  line-height: 1.5;
-}
-.footer-top {
-  display: flex;
-  align-items: center;
-  gap: 40px;
-  justify-content: space-between;
-}
+/* Footer styles moved to minimal */
 
 /* ---- RESPONSIVE ---- */
 @media (max-width: 1100px) {
@@ -1002,4 +986,33 @@
   .h-form-card { padding: 28px 20px; }
   .h-price-card { padding: 32px 28px; }
   .footer-top { flex-direction: column; align-items: flex-start; gap: 24px; }
+}
+
+/* ---- FOOTER MINIMAL ---- */
+.footer-minimal {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 28px 0;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+.footer-minimal .footer-links {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+.footer-minimal .footer-links a {
+  font-size: 14px;
+  color: rgba(255,255,255,0.35);
+  text-decoration: none;
+  transition: color 0.18s;
+}
+.footer-minimal .footer-links a:hover { color: rgba(255,255,255,0.75); }
+.footer-minimal .footer-copy {
+  font-size: 13px;
+  color: rgba(255,255,255,0.2);
+}
+@media (max-width: 640px) {
+  .footer-minimal { flex-direction: column; align-items: flex-start; }
 }
